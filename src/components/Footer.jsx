@@ -47,7 +47,7 @@ const Footer = () => {
     <footer className="footer-container">
             <div className="footer-logo">
                 <div className="footer-image">
-                    <img src="../src/assets/momis.png" alt="" />
+                    <img src="./assets/momis.png" alt="" />
                 </div>
                 <h2 className="fisioella">FISIOELLA</h2>
                 <p className="crefito">Crefito - 3 224592-F</p>
