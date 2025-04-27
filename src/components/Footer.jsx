@@ -1,0 +1,101 @@
+// src/components/Footer.jsx
+import React from 'react';
+import { useEffect } from 'react';
+
+const Footer = () => {
+    useEffect(() => {
+        const mybutton = document.getElementById("myBtn");
+        const backToTop = document.querySelector('.back-to-top');
+
+        const scrollFunction = () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        window.onscroll = scrollFunction;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+                backToTop.style.opacity = 1;
+            } else {
+                backToTop.classList.remove('show');
+                backToTop.style.opacity = 0;  
+            }
+        });
+
+        return () => {
+            window.onscroll = null; // Cleanup on component unmount
+        };
+    }, []);
+
+    const topFunction = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+
+    return (
+    <>
+    <div>
+        <button onClick={topFunction} id="myBtn" title="Voltar ao topo" className="back-to-top-button">
+            <img className="back-to-top show" src="./src/assets/back-to-top.png" alt="Voltar ao Topo" />
+        </button>
+    </div>
+    <footer className="footer-container">
+            <div className="footer-logo">
+                <div className="footer-image">
+                    <img src="./src/assets/momis.png" alt="" />
+                </div>
+                <h2 className="fisioella">FISIOELLA</h2>
+                <p className="crefito">Crefito - 3 224592-F</p>
+                <div className="redes-sociais">
+                    <a href="https://www.instagram.com/fisioella_pelve/" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-icon" src="./src/assets/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://wa.me/5512996461927" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-icon" src="./src/assets/whatsapp.png" alt="Whatsapp" />
+                    </a>
+                </div>
+            </div>
+            <div className="contato">
+                <h3>Contato</h3>
+                <p>
+                    <img className="footer-icon" src="./src/assets/telefone.png" alt="Telefone" />
+                    <a href="tel:(12) 99646-1927">(12) 99646-1927</a>
+                </p>
+                <p>
+                    <img className="footer-icon" src="./src/assets/telefone.png" alt="Telefone" />
+                    <a href="tel:(12) 99717-8862">(12) 99717-8862</a>
+                </p>
+                <p>
+                    <img className="footer-icon" src="./src/assets/email.png" alt="Email" />
+                    <a href="mailto:nc_almeida@yahoo.com.br">nc_almeida@yahoo.com.br</a>
+                </p>
+            </div>
+            <div className="endereços">
+                <h3>Endereços</h3>
+                <p>
+                    <img className="footer-icon" src="./src/assets/localização.png" alt="Localização" />
+                    <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7">
+                        Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São Dimas
+                    </a>
+                </p>
+            </div>
+
+        </footer>
+        
+            <p className="footer-copyright">
+            &copy;2025 Clara Cayres. All rights reserved. 
+            <a href="https://github.com/cayres0802" target="_blank" rel="noopener noreferrer">
+                github.com/cayres0802
+            </a>
+        </p>
+    
+    </>
+    );
+};
+
+export default Footer;
