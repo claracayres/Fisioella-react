@@ -4,7 +4,7 @@ FisioElla é um site profissional dedicado à fisioterapia pélvica, criado para
 🔗 Acesse o site:
 👉 fisioella.vercel.app
 
-✨ Funcionalidade
+✨ Funcionalidades
 
 Página inicial com design elegante e informações detalhadas sobre a profissional
 
