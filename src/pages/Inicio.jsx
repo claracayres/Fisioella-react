@@ -7,7 +7,7 @@ const Inicio = () => {
             <main className="main-content"></main>
 
             <div className="background-image" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-                <img src="./src/assets/flor.png" alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                <img src="./assets/flor.png" alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
             </div>
             
             <section id="inicio">
