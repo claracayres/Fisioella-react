@@ -12,7 +12,7 @@ const Inicio = () => {
             
             <section id="inicio">
                 <div className="main-text">
-                    <img src="./src/assets/logo.png" alt="Fisioella" className="hero-image" style={{ width: '85%' }} />
+                    <img src="/src/assets/logo.png" alt="Fisioella" className="hero-image" style={{ width: '85%' }} />
                     <h2>O autocuidado começa de dentro — e você merece esse olhar</h2>
                     <p>Na Fisioella, ofereço tratamentos de fisioterapia personalizados para atender às suas necessidades.</p>
                     <Link to="/Contato" className="btn">Agende sua consulta</Link>
