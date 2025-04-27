@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { useEffect } from 'react';
+import Neila from '../assets/momis.png'; // Importando a imagem de fundo
 
 const Footer = () => {
     useEffect(() => {
@@ -47,7 +48,7 @@ const Footer = () => {
     <footer className="footer-container">
             <div className="footer-logo">
                 <div className="footer-image">
-                    <img src="./assets/momis.png" alt="" />
+                    <img src={Neila} alt="" />
                 </div>
                 <h2 className="fisioella">FISIOELLA</h2>
                 <p className="crefito">Crefito - 3 224592-F</p>
