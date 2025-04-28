@@ -1,4 +1,5 @@
 import React from 'react';
+import Flor from '../assets/flor.png';
 import Neila from '../assets/momis-grande.png';
 
 
