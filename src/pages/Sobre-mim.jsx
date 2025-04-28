@@ -1,4 +1,5 @@
 import React from 'react';
+import Neila from '../assets/momis-grande.png';
 
 
 const SobreMim = () => {
@@ -16,7 +17,7 @@ const SobreMim = () => {
                 }}
             >
                 <img
-                    src="./src/assets/flor.png"
+                    src={Flor}
                     alt="flor"
                     style={{
                         position: 'absolute',
@@ -33,7 +34,7 @@ const SobreMim = () => {
             <section id="Sobre-mim">
                 <div className="Sobre-mim-container">
                     <img
-                        src="./src/assets/momis-grande.png"
+                        src={Neila}
                         alt="Fisioella"
                         className="Img-momis"
                     

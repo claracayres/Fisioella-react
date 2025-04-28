@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Flor from '../assets/flor.png';
+import Logo from '../assets/logo.png';
 
 const Inicio = () => {
     return (
@@ -7,12 +9,12 @@ const Inicio = () => {
             <main className="main-content"></main>
 
             <div className="background-image" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-                <img src="./assets/flor.png" alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                <img src={Flor} alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
             </div>
             
             <section id="inicio">
                 <div className="main-text">
-                    <img src="/src/assets/logo.png" alt="Fisioella" className="hero-image" style={{ width: '85%' }} />
+                    <img src={Logo}alt="Fisioella" className="hero-image" style={{ width: '85%' }} />
                     <h2>O autocuidado começa de dentro — e você merece esse olhar</h2>
                     <p>Na Fisioella, ofereço tratamentos de fisioterapia personalizados para atender às suas necessidades.</p>
                     <Link to="/Contato" className="btn">Agende sua consulta</Link>

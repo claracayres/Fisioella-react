@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Flor from '../assets/flor.png';
 
 const Tratamentos = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Tratamentos = () => {
         }}
       >
         <img
-          src="./src/assets/flor.png"
+          src={Flor}
           alt="flor"
           style={{
             position: 'absolute',

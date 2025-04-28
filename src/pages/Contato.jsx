@@ -1,4 +1,5 @@
 import React from 'react';
+import Flor from '../assets/flor.png';
 
 
 const Contato = () => {
@@ -44,7 +45,7 @@ const Contato = () => {
     return (
         <main className="contato">
             <div className="background-image" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }}>
-                <img src="./src/assets/flor.png" alt="flor" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+                <img src={Flor} alt="flor" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
             </div>
 
             <section id="Contato-page">
