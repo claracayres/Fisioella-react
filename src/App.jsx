@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Inicio from './pages/Inicio';
-import SobreMim from '/pages/Sobre-mim';
+import SobreMim from './pages/Sobre-mim';
 import Tratamentos from './pages/Tratamentos';
 import Contato from './pages/Contato';
 
