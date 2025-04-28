@@ -1,9 +1,19 @@
 // src/components/Header.jsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // Usando Link para navegação interna
-import Flor from '../assets/flor-header.png'; // Importando a imagem de fundo
+import { Link } from 'react-router-dom';
+import Flor from '../assets/flor-header.png';
 
 const Header = () => {
+  const handleLinkClick = () => {
+    const navbar = document.querySelector('.navbar');
+    const icon = document.querySelector('.hamburger i');
+
+    // Fecha o menu
+    navbar.classList.remove('active');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  };
+
   return (
     <header>
       <div
@@ -14,7 +24,7 @@ const Header = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1
+          zIndex: -1,
         }}
       >
         <img
@@ -27,15 +37,15 @@ const Header = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            opacity: 0.5
+            opacity: 0.5,
           }}
         />
       </div>
       <div
         className="navbar-container"
-        onClick={() => window.location.href = '/'}
-        onMouseOver={(e) => e.target.style.cursor = 'pointer'}
-        onMouseOut={(e) => e.target.style.cursor = 'default'}
+        onClick={() => (window.location.href = '/')}
+        onMouseOver={(e) => (e.target.style.cursor = 'pointer')}
+        onMouseOut={(e) => (e.target.style.cursor = 'default')}
         style={{ cursor: 'pointer' }}
       >
         <h1 className="fisioella">FISIOELLA</h1>
@@ -61,10 +71,26 @@ const Header = () => {
       </div>
       <nav className="navbar">
         <ul className="nav-list">
-          <li><Link className="pages" to="/">Início</Link></li>
-          <li><Link className="pages" to="/sobre-mim">Sobre mim</Link></li>
-          <li><Link className="pages" to="/tratamentos">Tratamentos</Link></li>
-          <li><Link className="pages" to="/contato">Contato</Link></li>
+          <li>
+            <Link className="pages" to="/" onClick={handleLinkClick}>
+              Início
+            </Link>
+          </li>
+          <li>
+            <Link className="pages" to="/sobre-mim" onClick={handleLinkClick}>
+              Sobre mim
+            </Link>
+          </li>
+          <li>
+            <Link className="pages" to="/tratamentos" onClick={handleLinkClick}>
+              Tratamentos
+            </Link>
+          </li>
+          <li>
+            <Link className="pages" to="/contato" onClick={handleLinkClick}>
+              Contato
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
