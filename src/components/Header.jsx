@@ -62,9 +62,9 @@ return (
         <nav className="navbar">
             <ul className="nav-list">
                 <li><Link className="pages" to="/">Início</Link></li>
-                <li><Link className="pages" to="/src/ppages/sobre-mim">Sobre mim</Link></li>
-                <li><Link className="pages" to="/src/pages/tratamentos">Tratamentos</Link></li>
-                <li><Link className="pages" to="/src/pages/contato">Contato</Link></li>
+                <li><Link className="pages" to="/sobre-mim">Sobre mim</Link></li>
+                <li><Link className="pages" to="/tratamentos">Tratamentos</Link></li>
+                <li><Link className="pages" to="/contato">Contato</Link></li>
             </ul>
         </nav>
     </header>
