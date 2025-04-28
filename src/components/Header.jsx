@@ -12,6 +12,9 @@ const Header = () => {
     navbar.classList.remove('active');
     icon.classList.remove('fa-times');
     icon.classList.add('fa-bars');
+
+    // Rola para o topo da página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
