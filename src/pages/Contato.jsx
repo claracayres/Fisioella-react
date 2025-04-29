@@ -52,7 +52,7 @@ const Contato = () => {
                 <div className="Contato-text">
                     <h1>Contato</h1>
                     <div className="contato-container">
-                        <p>Para mais informações, entre em contato conosco através dos números ou e-mail listados no rodapé.</p>
+                        <p>Para mais informações, entre em contato através do formulário abaixo.</p>
                         <div id="whatsapp-form">
                             <form id="contactForm" onSubmit={handleFormSubmit}>
                                 <label htmlFor="name">Nome:</label>

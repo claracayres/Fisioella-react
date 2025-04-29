@@ -71,23 +71,22 @@ const Footer = () => {
                 <h3>Contato</h3>
                 <p>
                     <img className="footer-icon" src={Telefone} alt="Telefone" />
-                    <a href="tel:(12) 99646-1927">(12) 99646-1927</a>
+                    <a href="tel:(12) 99646-1927"> (12) 99646-1927</a>
                 </p>
                 <p>
                     <img className="footer-icon" src={Telefone} alt="Telefone" />
-                    <a href="tel:(12) 99717-8862">(12) 99717-8862</a>
+                    <a href="tel:(12) 99717-8862"> (12) 99717-8862</a>
                 </p>
                 <p>
-                    <img className="footer-icon" src={Email} alt="Email" />
-                    <a href="mailto:nc_almeida@yahoo.com.br">nc_almeida@yahoo.com.br</a>
+                    <img className="footer-icon" src={Email} alt="Email" /> 
+                    <a href="mailto:nc_almeida@yahoo.com.br"> nc_almeida@yahoo.com.br</a>
                 </p>
             </div>
             <div className="endereços">
                 <h3>Endereços</h3>
                 <p>
-                    <img className="footer-icon" src={Localizacao} alt="Localização" />
-                    <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7">
-                        Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São Dimas
+                    <img className="footer-icon" src={Localizacao} alt="Localização" /> 
+                    <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7"> Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São Dimas
                     </a>
                 </p>
             </div>
@@ -95,7 +94,7 @@ const Footer = () => {
         </footer>
         
             <p className="footer-copyright">
-            &copy;2025 Clara Cayres. All rights reserved. <br />
+            &copy;2025 Clara Cayres. All rights reserved.<br /> 
             <a href="https://github.com/cayres0802" target="_blank" rel="noopener noreferrer">
                 github.com/cayres0802
             </a>
