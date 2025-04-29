@@ -725,7 +725,7 @@ button[type="submit"]:hover {
 }
   
 /* Celulares até 768px */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     /* Estilos para celular */
     .hamburger {
         display: block;
@@ -854,8 +854,6 @@ button[type="submit"]:hover {
         box-shadow: 0 2px 6px var(--shadow);
         box-sizing: border-box;
     }
-    
-
 
     #inicio h2{
         font-size: 30px;
@@ -1052,11 +1050,11 @@ button[type="submit"]:hover {
     }
 
     .fisioella {
-        font-size: 15px;
+        font-size: 20px;
     }
     
     .dra-neila{
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .hamburger {
@@ -1080,4 +1078,15 @@ button[type="submit"]:hover {
         padding: 20px;
         text-align: start;
     }
+}
+
+@media (max-width:320px) {
+    .fisioella {
+        font-size: 18px;
+    }
+    
+    .dra-neila {
+        font-size: 18px;
+    }
+
 }
