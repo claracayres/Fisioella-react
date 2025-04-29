@@ -81,7 +81,7 @@ const Tratamentos = () => {
                         Eletroterapia<br /> 
                         Laserterapia <br /> 
                         Exercícios específicos para musculatura  do assoalho pélvico <br />
-                        Terapia comportamental <br />
+                        Terapia<span> </span>comportamental <br />
                         Entre outros 
                     </p>
                 </div>
