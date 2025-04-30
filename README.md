@@ -65,5 +65,5 @@ Todo o conteúdo deste site, incluindo design, textos, imagens e código, é de 
 A reprodução, cópia ou uso não autorizado é expressamente proibido.
 
 ## 
-💻 Desenvolvido com ❤️ por Clara Cayres
+<p align="center"><strong>Desenvolvido com ❤️ por Clara Cayres</strong></p>
 ## 
