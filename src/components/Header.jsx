@@ -46,7 +46,10 @@ const Header = () => {
       </div>
       <div
         className="navbar-container"
-        onClick={() => (window.location.href = '/')}
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.location.href = '/';
+        }}
         onMouseOver={(e) => (e.target.style.cursor = 'pointer')}
         onMouseOut={(e) => (e.target.style.cursor = 'default')}
         style={{ cursor: 'pointer' }}
