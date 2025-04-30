@@ -6,10 +6,12 @@ import Inicio from './pages/Inicio';
 import SobreMim from './pages/Sobre-mim';
 import Tratamentos from './pages/Tratamentos';
 import Contato from './pages/Contato';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Inicio />} />

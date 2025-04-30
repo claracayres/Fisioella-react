@@ -12,9 +12,6 @@ const Header = () => {
     navbar.classList.remove('active');
     icon.classList.remove('fa-times');
     icon.classList.add('fa-bars');
-
-    // Rola para o topo da página
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -46,10 +43,7 @@ const Header = () => {
       </div>
       <div
         className="navbar-container"
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          window.location.href = '/';
-        }}
+        onClick={() => (window.location.href = '/')}
         onMouseOver={(e) => (e.target.style.cursor = 'pointer')}
         onMouseOut={(e) => (e.target.style.cursor = 'default')}
         style={{ cursor: 'pointer' }}
