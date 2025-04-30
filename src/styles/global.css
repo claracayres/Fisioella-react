@@ -92,7 +92,7 @@ header{
 
 header ul {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     list-style: none;
     padding: 0;
 }
@@ -801,9 +801,11 @@ button[type="submit"]:hover {
 }
   
 /* Tablets até 1024px */
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
     /* Estilos para tablet */
-    
+    .nav-list a{
+        font-size: 23px
+    }
     .navbar-container{
         display: flex;
         justify-content: space-between;
@@ -818,16 +820,16 @@ button[type="submit"]:hover {
     }
 
     .linha-vertical {
-        height: 28px;
+        height: 35px;
         margin-bottom: 10px;/* t r b l */
     }
     
     .fisioella {
-        font-size: 23px;
+        font-size: 28px;
     }
     
     .dra-neila{
-        font-size: 23px;
+        font-size: 28px;
     }
   }
   
@@ -858,7 +860,7 @@ button[type="submit"]:hover {
         z-index: 10;
         box-shadow: 0 2px 6px var(--shadow);
         box-sizing: border-box;
-    }
+    } 
 
     #inicio h2{
         font-size: 30px;
