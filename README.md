@@ -1,11 +1,10 @@
-FisioElla 🌸
+🌸 FisioElla
 FisioElla é um site profissional dedicado à fisioterapia pélvica, criado para oferecer serviços especializados, informações valiosas para gestantes e um canal de contato direto com a especialista.
 
 🔗 Acesse o site:
 👉 fisioella.vercel.app
 
 ✨ Funcionalidades
-
 Página inicial com design elegante e informações detalhadas sobre a profissional
 
 Seções exclusivas para:
@@ -14,7 +13,7 @@ Sobre a fisioterapeuta
 
 Atuação na fisioterapia pélvica
 
-Dicas e informações importantes para gestantes
+Dicas e orientações para gestantes
 
 Formulário de contato
 
@@ -23,26 +22,24 @@ Layout totalmente responsivo, garantindo uma experiência perfeita em celulares,
 Ícones personalizados e navegação intuitiva
 
 🛠️ Tecnologias Utilizadas
+React – Biblioteca principal para construção da interface
 
-React: Biblioteca principal para construção da interface
+React Router – Gerenciamento de rotas SPA
 
-React Router: Gerenciamento de rotas
+Axios – Comunicação com APIs (para formulários, se aplicável)
 
-Axios: Comunicação com APIs
+Styled Components – Estilização de componentes com CSS-in-JS
 
-Styled Components: Estilização dos componentes
-
-
-## Estrutura do Projeto
-
-```
+📁 Estrutura do Projeto
+bash
+Copy code
 Fisioella-react/
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── layouts/
-│   ├── pages/
-│   ├── styles/
+│   ├── assets/         # Imagens e ícones
+│   ├── components/     # Componentes reutilizáveis (Header, Footer etc.)
+│   ├── layouts/        # Layout principal da aplicação
+│   ├── pages/          # Páginas como Início, Sobre, Tratamentos, Contato
+│   ├── styles/         # Estilos globais
 ├── App.jsx
 ├── main.jsx
 ├── .gitignore
@@ -52,10 +49,8 @@ Fisioella-react/
 ├── package.json
 ├── README.md
 └── vite.config.js
-```
-
 ⚠️ Direitos Autorais
-Todo o conteúdo deste site, incluindo design, textos, imagens e código, é de propriedade exclusiva de FisioElla. A reprodução, cópia ou uso não autorizado é expressamente proibido.
+Todo o conteúdo deste site, incluindo design, textos, imagens e código, é de propriedade exclusiva de FisioElla.
+A reprodução, cópia ou uso não autorizado é expressamente proibido.
 
----
-Desenvolvido com ❤️ por Clara.
+💻 Desenvolvido com ❤️ por Clara Cayres
