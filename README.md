@@ -17,7 +17,7 @@
 
     - **Dicas e orientações para gestantes**
 
-    -**Formulário de contato**
+    - **Formulário de contato**
 
 - Layout totalmente responsivo, garantindo uma experiência perfeita em - celulares, tablets e desktops
 
