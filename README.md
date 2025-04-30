@@ -41,7 +41,6 @@
 ## 📁 Estrutura do Projeto
 
 ```bash
-Copy code
 Fisioella-react/
 ├── src/
 │   ├── assets/         # Imagens e ícones
