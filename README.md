@@ -66,4 +66,3 @@ A reprodução, cópia ou uso não autorizado é expressamente proibido.
 
 ## 
 <p align="center"><strong>Desenvolvido com ❤️ por Clara Cayres</strong></p>
-## 
