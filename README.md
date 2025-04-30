@@ -40,7 +40,7 @@
 
 ## 📁 Estrutura do Projeto
 
-bash
+```bash
 Copy code
 Fisioella-react/
 ├── src/
@@ -58,6 +58,7 @@ Fisioella-react/
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 ## ⚠️ Direitos Autorais
 
