@@ -1,36 +1,45 @@
-🌸 FisioElla
-FisioElla é um site profissional dedicado à fisioterapia pélvica, criado para oferecer serviços especializados, informações valiosas para gestantes e um canal de contato direto com a especialista.
+# 🌸 FisioElla
 
-🔗 Acesse o site:
-👉 fisioella.vercel.app
+**FisioElla** é um site profissional dedicado à fisioterapia pélvica, criado para oferecer serviços especializados, informações valiosas para gestantes e um canal de contato direto com a especialista.
 
-✨ Funcionalidades
-Página inicial com design elegante e informações detalhadas sobre a profissional
+## 🔗 Acesse o site:
+[👉 fisioella.vercel.app](https://fisioella.vercel.app)
 
-Seções exclusivas para:
+## ✨ Funcionalidades
 
-Sobre a fisioterapeuta
+- Página inicial com design elegante e informações detalhadas sobre a profissional
 
-Atuação na fisioterapia pélvica
+- Seções exclusivas para:
 
-Dicas e orientações para gestantes
+    - **Sobre a fisioterapeuta**
 
-Formulário de contato
+    - **Atuação na fisioterapia pélvica**
 
-Layout totalmente responsivo, garantindo uma experiência perfeita em celulares, tablets e desktops
+    - **Dicas e orientações para gestantes**
 
-Ícones personalizados e navegação intuitiva
+    -**Formulário de contato**
 
-🛠️ Tecnologias Utilizadas
-React – Biblioteca principal para construção da interface
+- Layout totalmente responsivo, garantindo uma experiência perfeita em - celulares, tablets e desktops
 
-React Router – Gerenciamento de rotas SPA
+- Ícones personalizados e navegação intuitiva
 
-Axios – Comunicação com APIs (para formulários, se aplicável)
+## 🛠️ Tecnologias Utilizadas
+- **React** – Biblioteca principal para construção da interface
 
-Styled Components – Estilização de componentes com CSS-in-JS
+- **React Router** – Gerenciamento de rotas SPA
 
-📁 Estrutura do Projeto
+- **Styled Components** – Estilização de componentes com CSS-in-JS
+
+- **HTML5** - Estrutura semântica da aplicação e marcação acessível
+
+- **Formspree** - Integração de formulários de contato com envio por e-mail
+
+- **WhatsApp API** - Redirecionamento direto para conversa via WhatsApp com a profissional
+
+- **Vercel** - Plataforma de hospedagem e deployment para a aplicação, com integração contínua e fácil deploy
+
+## 📁 Estrutura do Projeto
+
 bash
 Copy code
 Fisioella-react/
@@ -49,8 +58,10 @@ Fisioella-react/
 ├── package.json
 ├── README.md
 └── vite.config.js
-⚠️ Direitos Autorais
+
+## ⚠️ Direitos Autorais
+
 Todo o conteúdo deste site, incluindo design, textos, imagens e código, é de propriedade exclusiva de FisioElla.
 A reprodução, cópia ou uso não autorizado é expressamente proibido.
 
-💻 Desenvolvido com ❤️ por Clara Cayres
+## 💻 Desenvolvido com ❤️ por Clara Cayres
