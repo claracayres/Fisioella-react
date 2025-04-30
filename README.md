@@ -64,4 +64,6 @@ Fisioella-react/
 Todo o conteúdo deste site, incluindo design, textos, imagens e código, é de propriedade exclusiva de FisioElla.
 A reprodução, cópia ou uso não autorizado é expressamente proibido.
 
-## 💻 Desenvolvido com ❤️ por Clara Cayres
+## 
+💻 Desenvolvido com ❤️ por Clara Cayres
+## 
