@@ -3,9 +3,6 @@ import Flor from '../assets/flor.png';
 
 const Tratamentos = () => {
   useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-    if (!isMobile) return; // só aplica a lógica no mobile
 
     const buttons = document.querySelectorAll('.accordion');
 
