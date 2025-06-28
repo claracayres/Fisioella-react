@@ -1102,6 +1102,14 @@ button[type="submit"]:hover {
         height: auto;
     }
 
+    .title {
+        flex-direction: column;
+    }
+
+    .title .serviço-link-l {
+        position: relative;
+    }
+
     .serviço-card {
         width: fit-content;
         height: fit-content;
@@ -1167,14 +1175,6 @@ button[type="submit"]:hover {
         width: 2rem;
         height: auto;
         color: var(--dark-color);
-    }
-
-    .title {
-        flex-direction: column;
-    }
-
-    .title .serviço-link-l {
-        position: relative;
     }
 
 }
