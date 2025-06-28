@@ -17,7 +17,10 @@ const Inicio = () => {
                     <div className="hero-text">
                         <h2>"O autocuidado começa de dentro — e você merece esse olhar"</h2>
                         <p>Na Fisioella, ofereço tratamentos de fisioterapia personalizados para atender às suas necessidades.</p>
-                        <Link to="/Contato" className="btn">Agende sua consulta</Link>
+                        <div className="hero-buttons">
+                            <Link to="/Contato" className="btn">Agende sua consulta</Link>
+                        </div>
+                        
                     </div>
                     <img src={Logo} alt="Fisioella" className="hero-image" />
                 </div>
