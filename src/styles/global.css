@@ -25,9 +25,9 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Evita o scroll horizontal */
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-    margin: 0; /* Remove margens padrão */
+    overflow-x: hidden; 
+    box-sizing: border-box; 
+    margin: 0; 
 }
 html{
     scroll-behavior: smooth;
@@ -44,7 +44,7 @@ body{
 /* header */
 header{
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    flex-wrap: wrap; 
     position: fixed;
     top: 0;
     left: 0;
@@ -59,8 +59,8 @@ header{
     border-bottom: 2px solid var(--color-primary);
     box-sizing: border-box;
     overflow-x: hidden; 
-    scrollbar-width: none; /* Firefox */
-    z-index: 999; /* Garante que o header fique acima de outros elementos */
+    scrollbar-width: none; 
+    z-index: 999;
 
 }
 
@@ -162,17 +162,16 @@ section{
     text-align: center;
     padding: 70px 0 50px 0; /* t r b l */
     flex-wrap: wrap;
-
 }
 
 h1 {
   font-family: var(--kudry-font-family);
-  font-size: clamp(1.5rem, 4vw, var(--h2-font-size)); /* Ajusta automaticamente com base na largura da tela */
+  font-size: clamp(1.5rem, 4vw, var(--h2-font-size)); 
   font-weight: 600;
   color: var(--color-text);
   border-bottom: 3px solid var(--color-primary);
-  width: fit-content; /* Só ocupa o espaço do conteúdo */
-  margin: 0 auto; /* Centraliza automaticamente */
+  width: fit-content; 
+  margin: 0 auto; 
   box-shadow: 0px 8px 5px -6px var(--shadow);
 }
 
@@ -197,9 +196,9 @@ p {
     font-size: var(--p-font-size);
     font-weight: 300;
     color: var(--color-text);
-    max-width: 800px; /* Define a largura máxima do parágrafo */
-    margin: 20px auto; /* Centraliza o parágrafo */
-    line-height: 1.6; /* Melhora a legibilidade */
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
 }
 
 .hero-text {
@@ -250,7 +249,6 @@ p {
     width: 45%;
     height: auto;
 }
-
 
 .fisio-pelvica {
     padding: 80px;
@@ -336,10 +334,9 @@ p {
 
 .Img-momis{
     width: 30vw;
-    max-width: 400px; /* Largura máxima da imagem */
     height: auto;
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    box-shadow: 0px 8px 5px -6px var(--shadow); /* Adiciona sombra à imagem */
+    margin: 0 auto;
+    box-shadow: 0px 8px 5px -6px var(--shadow); 
 }
 
 #serviços{
@@ -353,8 +350,8 @@ p {
     align-items: center;
     justify-content: center;
     width: 90vw;
-    max-width: 1200px; /* Limita a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
+    max-width: 1200px; 
+    margin: 0 auto; 
     flex-wrap: wrap;
 }
 
@@ -375,7 +372,6 @@ p {
     gap: 2rem;
     margin: 30px;
     flex-wrap: wrap;
-    
 }
 
 .serviço-card {
@@ -478,7 +474,6 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
 .title .serviço-link-l {
@@ -487,10 +482,8 @@ p {
     z-index: 1;
 }
 
-
 .title h1 {
     margin: 0;
-    
 }
 
 .serviço-link-l {
@@ -505,12 +498,12 @@ p {
 
 .topico {
     gap: 20px;
-    width: 60%;
+    width: 80%;
 }
 
 .serviço-detalhes {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -523,10 +516,14 @@ p {
     background-color: rgba(244, 191, 194, 0.5);
     border-radius: 40px;
     padding: 10px;
+    width: 100%;
+    height: 100%;
     align-items: center;
+    justify-self: center;
     justify-content: center;
 }
 
+/* Contato */
 #Contato-page{
     width: 100%;
     box-sizing: border-box; 
@@ -537,8 +534,6 @@ p {
     width: 95%;
     max-width: 3000px;
 }
-
-/* Contato */
 
 #whatsapp-form {
     display: flex;
@@ -581,7 +576,6 @@ textarea {
     margin: 15px 0;
 }
 
-
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus,
@@ -614,7 +608,6 @@ button[type="submit"]:hover {
     transform: translateY(-5px);
 }
 
-/* Estilo para o botão de voltar ao topo */
 .back-to-top{
     display: none;
     position: fixed;
@@ -626,59 +619,56 @@ button[type="submit"]:hover {
     border-radius: 50%;
     box-shadow: 0 0 10px var(--shadow);
     pointer-events: none;
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out, pointer-events 0.3s ease-in-out;
-    z-index: 9999; /* Garantir que o botão esteja acima de outros elementos */
+    z-index: 9999;
 }
 .back-to-top-button {
     background-color: transparent;
     border: none; 
 }
-/* Quando o botão é exibido */
+
 .back-to-top.show {
     display: flex;
     pointer-events: auto;
-    opacity: 1; /* Torna o botão visível */
+    opacity: 1; 
 }
 
-/* Estilo da imagem do botão */
 .back-to-top img  {
-    width: 30px; /* Ajuste a largura conforme necessário */
+    width: 30px;
     height: auto;
-    margin: 0; /* Remover margem */
-    transition: transform 0.3s ease-in-out; /* Adicionando uma transição suave para a imagem */
+    margin: 0; 
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Opcional: Adicionando efeito de hover no ícone */
 .back-to-top:hover img {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.1); 
 }
-
 
 .footer-container  {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaçamento entre as colunas */
+    gap: 20px; 
     height: fit-content;
     padding: 10px; /* t r b l */
     text-align: center;
     background-color: #f4bfc286;
     color: var(--color-text);
-    border-top: 2px solid var(--color-primary); /* Linha superior */
-    border-bottom: 2px solid var(--color-primary); /* Linha inferior */
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
-    overflow-x: hidden; /* Esconde qualquer conteúdo que ultrapasse horizontalmente */
+    border-top: 2px solid var(--color-primary);
+    box-sizing: border-box; 
+    overflow-x: hidden; 
 }
 
 .footer-logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -765,16 +755,28 @@ button[type="submit"]:hover {
     text-align: center;
     width: 100%;
     margin: 0;
+    background-color: #9a5188;
     
 }
 
 .footer-copyright p {
     margin: 5px 0;
     font-size: 1rem;
+    color: #fff;
+}
+
+.footer-copyright p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-copyright p a:hover {
+    text-decoration: underline;
+    color: #f4bfc2;
 }
 
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     /* Estilos para celular */
     .hamburger {
         display: block;
@@ -788,8 +790,8 @@ button[type="submit"]:hover {
     .navbar {
         display: none;
         position: relative;
-        background-color: rgba(251, 241, 229, 0.5); /* ou #fef6e4 */
-        padding-top: 80px; /* espaço para o header */
+        background-color: rgba(251, 241, 229, 0.5);
+        padding-top: 80px;
         z-index: 998;
         width: 100%;
         max-height: 100vh;
@@ -830,7 +832,7 @@ button[type="submit"]:hover {
         font-size: 23px;
     }
 
-        body{
+    body{
         width: 100%;
         margin: 0;
         padding: 0;
@@ -842,7 +844,7 @@ button[type="submit"]:hover {
     
     header {
         display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         position: fixed;
@@ -863,9 +865,6 @@ button[type="submit"]:hover {
     .main-text{
 
         padding: 10px;
-    }
-    #inicio p{
-        font-size: 24px;
     }
 
     #inicio .btn{
@@ -892,6 +891,16 @@ button[type="submit"]:hover {
         padding: 20px 20px;     
     }
     
+    .Sobre-mim-texto{
+        background-color: rgba(244, 191, 194, 0.5);
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .Img-momis{
+        width: 25vh;
+    }
+
     #Contato-page{
         width: 100%;
         box-sizing: border-box; 
@@ -905,7 +914,6 @@ button[type="submit"]:hover {
         width: 100%; 
         padding: 20px;
         text-align: start;
-        
     }
 
     .footer-container h2 {
@@ -920,13 +928,13 @@ button[type="submit"]:hover {
         line-height: 1;
     }
     .footer-image img{
-        width: 100px; /* Ajuste o tamanho da imagem do logo */
-        height: auto; /* Mantém a proporção da imagem */
-  
+        width: 100px; 
+        height: auto;
+
     }
     .redes-sociais img{
-        width: 30px; /* Ajuste o tamanho do ícone */
-        height: auto; /* Mantém a proporção da imagem */
+        width: 30px; 
+        height: auto;
     }
 
     .contato {
@@ -955,7 +963,7 @@ button[type="submit"]:hover {
   
 /* Tablets até 1024px */
 @media (min-width: 1023px) {
-    /* Estilos para tablet */
+    
     .nav-list a{
         font-size: 23px
     }
@@ -984,18 +992,26 @@ button[type="submit"]:hover {
     .dra-neila{
         font-size: 28px;
     }
-  }
+}
   
 
 @media (max-width: 769px) {
     .main-text {
-        flex-direction: column-reverse; /* Coloca os itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        width: 100%; /* Largura total da tela */
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%; 
+    }
+
+    p{
+        font-size: 1.3rem;
+    }
+
+    .Sobre-mim-container {
+        flex-direction: column;
     }
 
     .endereços {
-        grid-column: 1 / 3; /* Ocupa duas colunas */
+        grid-column: 1 / 3; 
         text-align: center;
     }
 
@@ -1006,23 +1022,37 @@ button[type="submit"]:hover {
         align-items: center;
     }
 
+    .serviço-detalhes div{
+        width: 80%;
+        height: 100%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .serviço-detalhes {
+        display: flex;        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
     .serviço-card {
-        width: 90vw; /* Largura total da tela */
-        max-width: 400px; /* Largura máxima do card */
-        margin: 10px 0; /* Margem vertical entre os cards */
+        width: 90vw; 
+        max-width: 400px; 
+        margin: 10px 0; 
     }
 
     .footer-container p {
-        font-size: 1rem; /* Tamanho da fonte menor */
+        font-size: 1rem; 
     }
 
     .footer-container h2 {
-        font-size: 1.5rem; /* Tamanho da fonte menor */
+        font-size: 1.5rem; 
     }
 }
 
 @media (max-width:426px) {
-
+    
     .linha-vertical {
         height: 20px;
         margin-bottom: 10px;/* t r b l */
@@ -1044,20 +1074,29 @@ button[type="submit"]:hover {
         font-size: var(--p-font-size);
     }
 
-    p {
-        font-size: 1rem;
-    }
-
     .hero-image {
         width: 80%;
         height: auto;
     }
 
+    p{
+        font-size: 1rem;
+    }
+
+    .Sobre-mim-container {
+        flex-direction: column;
+    }
+
+    .Img-momis img{
+        width: 80%;
+        height: auto;
+    }
+
     .serviço-card {
-        width: fit-content; /* Largura total da tela */
+        width: fit-content;
         height: 360px;
-        max-width: 400px; /* Largura máxima do card */
-        margin: 10px 0; /* Margem vertical entre os cards */
+        max-width: 400px; 
+        margin: 10px 0; 
     }
 
     .serviço-card p {
@@ -1089,34 +1128,43 @@ button[type="submit"]:hover {
     }
 
     .serviço-card {
-        width: fit-content; /* Largura total da tela */
+        width: fit-content; 
         height: fit-content;
-        max-width: 400px; /* Largura máxima do card */
-        margin: 10px 0; /* Margem vertical entre os cards */
+        max-width: 400px; 
+        margin: 10px 0;
     }
 
     .serviço-card p {
         font-size: 13px;
     }
+
     #serviços h2 {
         font-size: 20px;
     }
 
     .serviço-image {
-    width: 2.6rem;
-    height: 2.6rem;
-    background-color: rgba(230, 122, 46, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
+        width: 2.6rem;
+        height: 2.6rem;
+        background-color: rgba(230, 122, 46, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
 
-.serviço-image .image {
-    width: 2rem;
-    height: auto;
-    color: var(--dark-color);
-}
+    .serviço-image .image {
+        width: 2rem;
+        height: auto;
+        color: var(--dark-color);
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title .serviço-link-l {
+        position: relative;
+    }
 
 }

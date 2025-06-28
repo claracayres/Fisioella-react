@@ -56,15 +56,17 @@ const Footer = () => {
                 <div className="footer-image">
                     <img src={Neila} alt="" />
                 </div>
-                <h2 className="fisioella">FISIOELLA</h2>
-                <p className="crefito">Crefito - 3 224592-F</p>
-                <div className="redes-sociais">
-                    <a href="https://www.instagram.com/fisioella_pelve/" target="_blank" rel="noopener noreferrer">
-                        <img className="footer-icon" src={Instagram} alt="Instagram" />
-                    </a>
-                    <a href="https://wa.me/5512996461927" target="_blank" rel="noopener noreferrer">
-                        <img className="footer-icon" src={Whatsapp} alt="Whatsapp" />
-                    </a>
+                <div>
+                    <h2 className="fisioella">FISIOELLA</h2>
+                    <p className="crefito">Crefito - 3 224592-F</p>
+                    <div className="redes-sociais">
+                        <a href="https://www.instagram.com/fisioella_pelve/" target="_blank" rel="noopener noreferrer">
+                            <img className="footer-icon" src={Instagram} alt="Instagram" />
+                        </a>
+                        <a href="https://wa.me/5512996461927" target="_blank" rel="noopener noreferrer">
+                            <img className="footer-icon" src={Whatsapp} alt="Whatsapp" />
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className="contato">
@@ -74,16 +76,13 @@ const Footer = () => {
                     <a href="tel:(12) 99646-1927"> (12) 99646-1927</a>
                 </p>
                 <p>
-                    <img className="footer-icon" src={Telefone} alt="Telefone" />
-                    <a href="tel:(12) 99717-8862"> (12) 99717-8862</a>
-                </p>
-                <p>
                     <img className="footer-icon" src={Email} alt="Email" /> 
                     <a href="mailto:nc_almeida@yahoo.com.br"> nc_almeida@yahoo.com.br</a>
                 </p>
+
             </div>
             <div className="endereços">
-                <h2>Endereços</h2>
+                <h2>Endereço</h2>
                 <p>
                     <img className="footer-icon" src={Localizacao} alt="Localização" /> 
                     <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7"> Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São Dimas
@@ -93,7 +92,7 @@ const Footer = () => {
         </footer>
         <div className="footer-copyright">
             <p>
-                &copy;2025 Clara Cayres. All rights reserved. 
+                &copy;2025 Clara Cayres. All rights reserved.{" "}
                 <a href="https://github.com/cayres0802" target="_blank" rel="noopener noreferrer">
                     github.com/cayres0802
                 </a>
