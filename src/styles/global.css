@@ -31,14 +31,10 @@ html, body {
 }
 html{
     scroll-behavior: smooth;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: var(--text-font-family);
+    line-height: 1.4;
 }
 body{
-    font-family: var(--text-font-family);
     background-color: var(--color-background);
-    color: var(--color-text);
 }
 
 /* header */
@@ -198,7 +194,6 @@ p {
     color: var(--color-text);
     max-width: 800px;
     margin: 20px auto;
-    line-height: 1.6;
 }
 
 .hero-text {
@@ -430,9 +425,10 @@ p {
     margin-bottom: 1rem;
 }
 
-.serviço-link {
+.serviço-link, .serviço-link-l {
     color: var(--dark-color);
     font-weight: 500;
+    font-family: var(--text-font-family);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,16 +480,6 @@ p {
 
 .title h1 {
     margin: 0;
-}
-
-.serviço-link-l {
-    color: var(--dark-color);
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .topico {
@@ -657,7 +643,6 @@ button[type="submit"]:hover {
     padding: 10px; /* t r b l */
     text-align: center;
     background-color: #f4bfc286;
-    color: var(--color-text);
     border-top: 2px solid var(--color-primary);
     box-sizing: border-box; 
     overflow-x: hidden; 
@@ -682,6 +667,7 @@ button[type="submit"]:hover {
 .footer-container h2 {
     margin: 0;
     text-align: center;
+    font-size: 1rem;
 }
 
 .footer-container p {
@@ -698,8 +684,6 @@ button[type="submit"]:hover {
 .contato {
     display: flex;
     flex-direction: column;
-    font-family: var(--text-font-family);
-    font-size: var(--p-font-size);
 }
 
 .contato a {
@@ -717,7 +701,6 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     font-family: var(--text-font-family);
-    font-size: var(--p-font-size);
 }
 
 .endereços a {
@@ -831,16 +814,6 @@ button[type="submit"]:hover {
     .dra-neila{
         font-size: 23px;
     }
-
-    body{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: var(--text-font-family);
-        background-color: var(--color-background);
-        color: var(--color-text);
-        overflow-x: hidden;
-    }
     
     header {
         display: flex;
@@ -923,7 +896,6 @@ button[type="submit"]:hover {
     .endereços {
         text-align: center; 
         font-size: 14px; 
-        line-height: 1;
     }
     .footer-image img{
         width: 100px; 
@@ -938,6 +910,7 @@ button[type="submit"]:hover {
     .footer-logo{
         grid-row: 1 / span 2;
     }
+
     .contato {
         text-align: center;
     }
