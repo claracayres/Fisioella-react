@@ -1,34 +1,11 @@
 import React, { useEffect } from 'react';
 import Flor from '../assets/flor.png';
+import iconfisio from '../assets/favicon.png';
+import icondrenagem from '../assets/icon-drenagem.png';
+import iconradio from '../assets/icon-radio3.png';
+import { Link } from 'react-router-dom';
 
 const Tratamentos = () => {
-  useEffect(() => {
-
-    const buttons = document.querySelectorAll('.accordion');
-
-    const handleClick = (e) => {
-      const button = e.currentTarget;
-      const boxContainer = button.closest('.box-container');
-
-      document.querySelectorAll('.box-container').forEach((container) => {
-        if (container !== boxContainer) {
-          container.classList.remove('expanded');
-        }
-      });
-
-      boxContainer.classList.toggle('expanded');
-    };
-
-    buttons.forEach((button) => {
-      button.addEventListener('click', handleClick);
-    });
-
-    return () => {
-      buttons.forEach((button) => {
-        button.removeEventListener('click', handleClick);
-      });
-    };
-  }, []);
 
   return (
     <main className="main-content">
@@ -53,102 +30,64 @@ const Tratamentos = () => {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            opacity: 0.5,
+            opacity: 0.3,
           }}
         />
       </div>
 
-      <section id="Tratamentos-container">
-        <div className="Tratamentos-text">
-          <h1>TRATAMENTOS</h1>
-          <p>
-          Lembrando que é sempre realizada uma avaliação para traçar qual melhor tratamento para cada paciente, assim sendo possível  a individualidade do tratamento.
-          </p>
-          <div className="containers">
-            <div className="box-container">
-              <div className="box">
-                <h2>Fisioterapia Pélvica</h2>
-                <p>Tratamento para fortalecer e reequilibrar a região pélvica.</p>
-                <button className="accordion">Saiba mais</button>
+      <section id="serviços" className="serviços-section">
+        <div className="serviços-container">
+          <div className="serviços-header">
+            <h1>TRATAMENTOS</h1>
+            <p>
+              Lembrando que é sempre realizada uma avaliação para traçar qual melhor tratamento para cada paciente, assim sendo possível  a individualidade do tratamento.
+            </p>
+          </div>
+
+          <div className="serviços-grid">
+            {/* Tratamento 1 */}
+            <div className="serviço-card">
+              <div className="serviço-image">
+                <img className='image' src={iconfisio} alt="Fisioterapia Pélvica" />
               </div>
-              <div className="box-slider">
-                <div className="text">
-                    <h3>Fisioterapia Pélvica</h3>
-                    <p>
-                        Eletroterapia<br /> 
-                        Laserterapia <br /> 
-                        Exercícios específicos para musculatura  do assoalho pélvico <br />
-                        Terapia comportamental <br />
-                        Entre outros 
-                    </p>
-                </div>
-                <div className="text">
-                    <h3>Para gestantes pré e pós parto</h3>
-                    <p>
-                    Exercícios respiratórios<br />
-                    Exercícios direcionados para funcionalidade da musculatura do abdômen, músculos pélvico e paravertebrais.<br />
-                    Exercícios de mobilidade para facilitar a passagem do bebê <br />
-                    Taping de sustentação na barriga <br />
-                    Taping para aliviar dores na lombar.<br />
-                    </p>
-                </div>
+              <h2>Fisioterapia Pélvica</h2>
+              <p>Tratamento para fortalecer e reequilibrar a região pélvica.</p>
+              <a href="/Fisiopelvica" className="serviço-link">
+                  Saiba mais
+                  <svg className="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+              </a>
+            </div>
+            
+            {/* Tratamento 2 */}
+            <div className="serviço-card">
+              <div className="serviço-image">
+                <img className='image' src={iconradio} alt="Radiofrequência íntima" />
               </div>
+              <h2>Radiofrequência íntima</h2>
+              <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
+              <a href="/Radiofrequencia" className="serviço-link">
+                  Saiba mais
+                  <svg className="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+              </a>
             </div>
 
-            <div className="box-container">
-              <div className="box">
-                <h2>Radiofrequência íntima</h2>
-                <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
-                <button className="accordion">Saiba mais</button>
+            {/* Tratamento 3 */}
+            <div className="serviço-card centered">
+              <div className="serviço-image">
+                <img className='icondrenagem' src={icondrenagem} alt="Drenagem Linfática" />
               </div>
-              <div className="box-slider">
-                <div className="text">
-                    <h3>Para que serve a radiofrequência íntima:</h3>
-                     <p>
-                    Estimula a produção de colágeno na região íntima<br />
-                    Melhora a flacidez dos tecidos<br />
-                    Aumenta a lubrificação vaginal<br />
-                    Melhora a sensibilidade durante o contato íntimo<br />
-                    Auxilia em casos leves de incontinência urinária<br />
-                    Contribui para o rejuvenescimento íntimo
-                  </p>
-                </div>
-                <div className="text">
-                    <h3>Como é utilizada:</h3>
-                    <p>
-                    Procedimento não invasivo e indolor <br />
-                    Realizado em consultório por profissional especializado<br />
-                    Utiliza um aparelho que emite ondas de calor controladas<br />
-                    Aquece suavemente a região, promovendo regeneração dos tecidos<br />
-                    Sessões rápidas, com tempo de recuperação mínimo ou inexistente<br />
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="box-container">
-              <div className="box">
-                <h2>Drenagem Linfática</h2>
-                <p>Redução de inchaço e toxinas com massagem terapêutica.</p>
-                <button className="accordion">Saiba mais</button>
-              </div>
-              <div className="box-slider">
-                <div className="text">
-                  <h3>Taping</h3>
-                  <p>Estimula a circulação e a drenagem linfática, ajudando a reduzir inchaços e retenção de líquidos.</p>
-                  <h3>Movimentos Manuais</h3>
-                  <p>Manobras suaves para eliminar toxinas e aliviar a sensação de peso.</p>
-                </div>
-                <div className="text">
-                  <h3>Pós-operatório e Cuidados Especiais</h3>
-                  <p>Auxilia na recuperação pós-cirúrgica e em condições como lipedema e linfedema.</p>
-                  <p>Essas técnicas proporcionam alívio, leveza e bem-estar.</p>
-                </div>
-                <div className='text'>
-                    <h3>Lasertarapia</h3>
-                    <p>Aplicação em linfonodos que promovem a drenagem a longo prazo. Aliviando dores e sensação de peso por ser analgésico e anti-inflamatório.</p>
-                </div>
-              </div>
+              <h2>Drenagem Linfática</h2>
+              <p>Redução de inchaço e toxinas com massagem terapêutica.</p>
+              <a href="/Drenagem" className="serviço-link">
+                  Saiba mais
+                  <svg className="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+              </a>
             </div>
           </div>
         </div>

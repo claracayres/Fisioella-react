@@ -68,7 +68,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="contato">
-                <h3>Contato</h3>
+                <h2>Contato</h2>
                 <p>
                     <img className="footer-icon" src={Telefone} alt="Telefone" />
                     <a href="tel:(12) 99646-1927"> (12) 99646-1927</a>
@@ -83,23 +83,22 @@ const Footer = () => {
                 </p>
             </div>
             <div className="endereços">
-                <h3>Endereços</h3>
+                <h2>Endereços</h2>
                 <p>
                     <img className="footer-icon" src={Localizacao} alt="Localização" /> 
                     <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7"> Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São Dimas
                     </a>
                 </p>
             </div>
-
         </footer>
-        
-            <p className="footer-copyright">
-            &copy;2025 Clara Cayres. All rights reserved.<br /> 
-            <a href="https://github.com/cayres0802" target="_blank" rel="noopener noreferrer">
-                github.com/cayres0802
-            </a>
-        </p>
-    
+        <div className="footer-copyright">
+            <p>
+                &copy;2025 Clara Cayres. All rights reserved. 
+                <a href="https://github.com/cayres0802" target="_blank" rel="noopener noreferrer">
+                    github.com/cayres0802
+                </a>
+            </p>
+        </div>
     </>
     );
 };

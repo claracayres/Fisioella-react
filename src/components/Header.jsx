@@ -16,31 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <div
-        className="background-image"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: -1,
-        }}
-      >
-        <img
-          src={Flor}
-          alt="flor"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            opacity: 0.5,
-          }}
-        />
-      </div>
+
       <div
         className="navbar-container"
         onClick={() => (window.location.href = '/')}
@@ -48,9 +24,9 @@ const Header = () => {
         onMouseOut={(e) => (e.target.style.cursor = 'default')}
         style={{ cursor: 'pointer' }}
       >
-        <h1 className="fisioella">FISIOELLA</h1>
+        <h2 className="fisioella">FISIOELLA</h2>
         <hr className="linha-vertical" />
-        <h1 className="dra-neila">Dra. Neila Cayres</h1>
+        <h2 className="dra-neila">Dra. Neila Cayres</h2>
       </div>
       <div>
         <button

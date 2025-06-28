@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Flor from '../assets/flor.png';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo-2.png';
 
 const Inicio = () => {
     return (
@@ -9,17 +9,20 @@ const Inicio = () => {
             <main className="main-content"></main>
 
             <div className="background-image" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-                <img src={Flor} alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                <img src={Flor} alt="flor" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.2 }} />
             </div>
             
             <section id="inicio">
                 <div className="main-text">
-                    <img src={Logo}alt="Fisioella" className="hero-image" style={{ width: '85%' }} />
-                    <h2>O autocuidado começa de dentro — e você merece esse olhar</h2>
-                    <p>Na Fisioella, ofereço tratamentos de fisioterapia personalizados para atender às suas necessidades.</p>
-                    <Link to="/Contato" className="btn">Agende sua consulta</Link>
+                    <div className="hero-text">
+                        <h2>"O autocuidado começa de dentro — e você merece esse olhar"</h2>
+                        <p>Na Fisioella, ofereço tratamentos de fisioterapia personalizados para atender às suas necessidades.</p>
+                        <Link to="/Contato" className="btn">Agende sua consulta</Link>
+                    </div>
+                    <img src={Logo} alt="Fisioella" className="hero-image" />
                 </div>
-
+            </section>
+            <section id="inicio">
                 <div className="fisio-pelvica">
                     <h2>O que é fisioterapia Pélvica?</h2>
 
