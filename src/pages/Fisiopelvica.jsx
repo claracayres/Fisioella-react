@@ -1,16 +1,16 @@
-import Flor from '../assets/flor.png';
+import Flor from "../assets/flor.png";
 
 const FisioPelvica = () => {
   return (
     <section>
-        <div
+      <div
         className="background-image"
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%',
+          width: "100%",
+          height: "100%",
           zIndex: -1,
         }}
       >
@@ -18,59 +18,81 @@ const FisioPelvica = () => {
           src={Flor}
           alt="flor"
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
             opacity: 0.3,
           }}
         />
       </div>
       <div className="sub-container">
         <div className="title">
-              <a href="/tratamentos" className="serviço-link-l">
-                <svg className="arrow-icon-l" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-                  Voltar
-              </a>
+          <a href="/tratamentos" className="serviço-link-l">
+            <svg
+              className="arrow-icon-l"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Voltar
+          </a>
           <h1>Fisioterapia Pélvica</h1>
         </div>
         <div className="topico">
           <p>
-            A fisioterapia pélvica é uma especialidade que se concentra no tratamento de disfunções relacionadas à região pélvica, incluindo problemas urológicos, ginecológicos e proctológicos. Os fisioterapeutas especializados nessa área utilizam técnicas específicas para ajudar na reabilitação e no fortalecimento dos músculos do assoalho pélvico.
+            A fisioterapia pélvica é uma especialidade que se concentra no
+            tratamento de disfunções relacionadas à região pélvica, incluindo
+            problemas urológicos, ginecológicos e proctológicos. Os
+            fisioterapeutas especializados nessa área utilizam técnicas
+            específicas para ajudar na reabilitação e no fortalecimento dos
+            músculos do assoalho pélvico.
           </p>
           <p>
-            Se você está enfrentando problemas como incontinência urinária, dor pélvica crônica ou disfunções sexuais, a fisioterapia pélvica pode ser uma opção eficaz para melhorar sua qualidade de vida.
+            Se você está enfrentando problemas como incontinência urinária, dor
+            pélvica crônica ou disfunções sexuais, a fisioterapia pélvica pode
+            ser uma opção eficaz para melhorar sua qualidade de vida.
           </p>
         </div>
-        
+
         <div className="serviço-detalhes">
           <div>
             <h3>Técnicas utilizadas:</h3>
-              <p>
-                    Eletroterapia<br /> 
-                    Laserterapia <br /> 
-                    Exercícios específicos para musculatura do assoalho pélvico <br />
-                    Terapia comportamental <br />
-                    Entre outros 
-              </p>
+            <p>
+              Eletroterapia
+              <br />
+              Laserterapia <br />
+              Exercícios específicos para musculatura do assoalho pélvico <br />
+              Terapia comportamental <br />
+              Entre outros
+            </p>
           </div>
           <div>
             <h3>Para gestantes pré e pós parto:</h3>
-              <p>
-                    Exercícios respiratórios<br />
-                    Exercícios direcionados para funcionalidade da musculatura do abdômen, músculos pélvico e paravertebrais.<br />
-                    Exercícios de mobilidade para facilitar a passagem do bebê <br />
-                    Taping de sustentação na barriga <br />
-                    Taping para aliviar dores na lombar.<br />
-              </p>
+            <p>
+              Exercícios respiratórios
+              <br />
+              Exercícios direcionados para funcionalidade da musculatura do
+              abdômen, músculos pélvico e paravertebrais.
+              <br />
+              Exercícios de mobilidade para facilitar a passagem do bebê <br />
+              Taping de sustentação na barriga <br />
+              Taping para aliviar dores na lombar.
+              <br />
+            </p>
           </div>
-      </div>
+        </div>
       </div>
     </section>
   );
-}
+};
 export default FisioPelvica;
