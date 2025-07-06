@@ -1038,7 +1038,7 @@ button[type="submit"]:hover {
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 494px) {
   .linha-vertical {
     height: 20px;
     margin-bottom: 10px; /* t r b l */
