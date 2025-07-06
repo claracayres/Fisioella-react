@@ -414,6 +414,18 @@ p {
   color: var(--dark-color);
 }
 
+.breve{
+  color: black;
+  background-color: #83286c8e;
+  font-family: var(--text-font-family);
+  font-size: 1.5rem;
+  border-radius: 30px;
+  margin: 10px;
+  width: max-content;
+  padding: 0 15px;
+  align-self: center;
+}
+
 .serviço-card h3 {
   font-size: 1.8rem;
   font-family: var(--kudry-font-family);
