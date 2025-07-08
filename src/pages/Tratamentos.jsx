@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Flor from "../assets/flor.png";
-import iconfisio from "../assets/favicon.png";
+import iconfisio from "/favicon.png";
 import icondrenagem from "../assets/icon-drenagem.png";
 import iconradio from "../assets/icon-radio3.png";
 import { Link } from "react-router-dom";

@@ -1,8 +1,8 @@
 // generate-sitemap.js
-const fs = require('fs');
-const { SitemapStream, streamToPromise } = require('sitemap');
+import fs from 'fs';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { Readable } from 'stream';
 
-// domínio do seu site:
 const siteUrl = 'https://www.fisioella.com.br';
 
 const pages = [
@@ -24,7 +24,6 @@ pages.forEach((page) => {
 
 sitemap.end();
 
-streamToPromise(sitemap).then((data) => {
-  fs.writeFileSync('./public/sitemap.xml', data.toString());
-  console.log('✅ Sitemap criado com sucesso em public/sitemap.xml');
-});
+const data = await streamToPromise(Readable.from(sitemap));
+fs.writeFileSync('./public/sitemap.xml', data.toString());
+console.log('✅ Sitemap criado com sucesso em public/sitemap.xml');
