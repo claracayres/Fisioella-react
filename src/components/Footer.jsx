@@ -123,7 +123,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            github.com/cayres0802
+            github.com/claracayres
           </a>
         </p>
       </div>
