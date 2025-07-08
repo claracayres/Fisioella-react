@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Flor from "../assets/flor.png";
-import Logo from "../assets/logo-2.png";
+import Logo from "../assets/logo-2.webp";
 
 const Inicio = () => {
   return (
@@ -47,7 +47,12 @@ const Inicio = () => {
               </Link>
             </div>
           </div>
-          <img src={Logo} alt="Fisioella" className="hero-image" fetchpriority="high" />
+          <img
+            src={Logo}
+            alt="Fisioella"
+            className="hero-image"
+            fetchpriority="high"
+          />
         </div>
       </section>
       <section id="inicio">
