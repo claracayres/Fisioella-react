@@ -119,7 +119,7 @@ const Footer = () => {
         <p>
           &copy;2025 Clara Cayres. All rights reserved.{" "}
           <a
-            href="https://github.com/cayres0802"
+            href="https://github.com/claracayres"
             target="_blank"
             rel="noopener noreferrer"
           >
