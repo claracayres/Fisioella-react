@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Flor from "../assets/flor.png";
 import Logo from "../assets/logo-2.png";
