@@ -47,7 +47,7 @@ const Inicio = () => {
               </Link>
             </div>
           </div>
-          <img src={Logo} alt="Fisioella" className="hero-image" />
+          <img src={Logo} alt="Fisioella" className="hero-image" fetchpriority="high" />
         </div>
       </section>
       <section id="inicio">
