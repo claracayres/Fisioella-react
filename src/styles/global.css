@@ -552,7 +552,7 @@ form {
 
 label {
   font-family: var(--text-font-family);
-  font-size: var(--h3-font-size);
+  font-size: var(--p-font-size);
   font-weight: 300;
   color: var(--color-text);
   margin: 10px 0 10px 0; /* t r b l */
@@ -565,12 +565,12 @@ input[type="message"],
 textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid var(--color-primary);
-  padding: 10px;
-  width: 50vw;
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
+  padding: 15px;
+  width: 65vw;
   font-family: var(--text-font-family);
   font-size: 1.2rem;
-  margin: 15px 0;
 }
 
 input[type="text"]:focus,
@@ -582,6 +582,10 @@ textarea:focus {
   border-bottom: 2px solid var(--color-primary);
 }
 
+textarea {
+  resize: none;
+}
+
 button[type="submit"] {
   align-self: center;
   display: inline-block;
@@ -590,9 +594,10 @@ button[type="submit"] {
   text-decoration: none;
   color: var(--color-primary);
   width: 30vw;
-  border-radius: 20px;
   padding: 10px 20px;
-  border: rgba(131, 40, 109, 0.6) solid 2px;
+  margin: 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 30px;
   background-color: transparent;
   box-shadow: 0 0 7px var(--shadow);
   transition: all 0.3s ease, box-shadow 0.3s ease;
