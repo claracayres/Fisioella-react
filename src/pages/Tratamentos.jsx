@@ -85,7 +85,6 @@ const Tratamentos = () => {
                 />
               </div>
               <h2>Radiofrequência íntima</h2>
-              <p className="breve">Em breve</p>
               <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
 
               <a href="/Radiofrequencia" className="serviço-link">
