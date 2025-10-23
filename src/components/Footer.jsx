@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import { useEffect } from "react";
-import Neila from "../assets/momis.png";
+import Neila from "../assets/Neila4.jpg";
 import Instagram from "../assets/instagram.png";
 import Whatsapp from "../assets/whatsapp.png";
 import Telefone from "../assets/telefone.png";

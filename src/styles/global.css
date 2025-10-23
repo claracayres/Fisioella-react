@@ -11,7 +11,7 @@
   --text-font-family: "Poppins", sans-serif;
 
   --h1-font-size: 3.5rem;
-  --h2-font-size: 2.5rem;
+  --h2-font-size: 2rem;
   --h3-font-size: 1.8rem;
   --p-font-size: 1.2rem;
 }
@@ -19,15 +19,11 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  box-sizing: border-box;
-  margin: 0;
-}
 html {
   scroll-behavior: smooth;
   line-height: 1.4;
@@ -38,45 +34,40 @@ body {
 
 /* header */
 header {
+  width: 100%;
+  height: 80px;
+}
+
+nav {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  align-content: center;
+  padding: 10px 20px;
   width: 100%;
-  height: 70px;
-  padding: 0px 10px 0px 10px;
-  background-color: rgba(251, 241, 229, 0.8);
-  color: var(--color-text);
-  border-bottom: 2px solid var(--color-primary);
-  box-sizing: border-box;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  z-index: 999;
+  background-color: rgba(251, 241, 229, 0.9);
+  z-index: 1;
+  border-bottom: #83286d solid 2px;
 }
 
 .linha-vertical {
   width: 2px;
-  height: 60px;
+  height: 30px;
+  background-color: #83286d;
   border: none;
-  background-color: var(--color-primary);
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   max-width: 100%;
 }
 
 .navbar-container .hamburger {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  display: none;
 }
 
 .fisioella {
@@ -84,7 +75,7 @@ header {
   font-size: var(--h1-font-size);
   font-weight: 300;
   color: var(--color-text);
-  margin: 0;
+  line-height: 1.2;
 }
 
 .dra-neila {
@@ -92,7 +83,7 @@ header {
   font-size: var(--h1-font-size);
   font-weight: 600;
   color: var(--color-text);
-  margin: 0;
+  line-height: 1.2;
 }
 
 .nav-list {
@@ -153,7 +144,7 @@ section {
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  padding: 70px 0 50px 0; /* t r b l */
+  padding: 0 0 50px 0; /* t r b l */
   flex-wrap: wrap;
 }
 
@@ -266,9 +257,6 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  width: fit-content;
   justify-self: center;
 }
 .item7 li {
@@ -321,8 +309,9 @@ p {
 
 .Sobre-mim-texto {
   background-color: rgba(244, 191, 194, 0.5);
+  border: #f4bfc2 solid 2px;
   border-radius: 30px;
-  padding: 10px;
+  padding: 25px;
 }
 
 .Img-momis {
@@ -675,8 +664,9 @@ button[type="submit"]:hover {
 }
 
 .footer-image img {
-  width: 100%;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -785,6 +775,15 @@ button[type="submit"]:hover {
   }
 
   .navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .navbar-links {
     display: none;
     position: relative;
     background-color: rgba(251, 241, 229, 0.5);
@@ -793,17 +792,16 @@ button[type="submit"]:hover {
     width: 100%;
     max-height: 100vh;
     overflow-y: auto;
-    display: none;
   }
 
   .navbar-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 10px;
+    place-items: baseline;
   }
 
-  .navbar.active {
+  .navbar-links.active {
     display: block;
     padding: 0;
     flex-wrap: wrap;
@@ -828,7 +826,7 @@ button[type="submit"]:hover {
     font-size: 23px;
   }
 
-  header {
+  /* header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -842,6 +840,10 @@ button[type="submit"]:hover {
     z-index: 10;
     box-shadow: 0 2px 6px var(--shadow);
     box-sizing: border-box;
+  } */
+
+  section {
+    padding: 70px 0 50px 0; /* t r b l */
   }
 
   #inicio h2 {
@@ -952,22 +954,11 @@ button[type="submit"]:hover {
   .nav-list a {
     font-size: 23px;
   }
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
 
   .navbar.active {
     display: block;
     padding: 0;
     flex-wrap: wrap;
-  }
-
-  .linha-vertical {
-    height: 35px;
-    margin-bottom: 10px; /* t r b l */
   }
 
   .fisioella {

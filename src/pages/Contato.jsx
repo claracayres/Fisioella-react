@@ -1,5 +1,5 @@
-import React from "react";
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
 
 const Contato = () => {
   const handleFormSubmit = async (event) => {
@@ -43,85 +43,95 @@ const Contato = () => {
   };
 
   return (
-    <main className="contato">
-      <div
-        className="background-image"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1,
-        }}
-      >
-        <img
-          src={Flor}
-          alt="flor"
+    <>
+      <Helmet>
+        <title>Contato - Fisioella</title>
+        <meta
+          name="description"
+          content="Entre em contato com a Fisioella para mais informações."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/contato" />
+      </Helmet>
+      <main className="contato">
+        <div
+          className="background-image"
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
-            opacity: 0.5,
+            zIndex: -1,
           }}
-        />
-      </div>
+        >
+          <img
+            src={Flor}
+            alt="flor"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: 0.5,
+            }}
+          />
+        </div>
 
-      <section id="Contato-page">
-        <div className="Contato-text">
-          <h1>Contato</h1>
-          <div className="contato-container">
-            <p>
-              Para mais informações, entre em contato através do formulário
-              abaixo.
-            </p>
-            <div id="whatsapp-form">
-              <form id="contactForm" onSubmit={handleFormSubmit}>
-                <label htmlFor="name">Nome:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Seu nome"
-                  required
-                />
+        <section id="Contato-page">
+          <div className="Contato-text">
+            <h1>Contato</h1>
+            <div className="contato-container">
+              <p>
+                Para mais informações, entre em contato através do formulário
+                abaixo.
+              </p>
+              <div id="whatsapp-form">
+                <form id="contactForm" onSubmit={handleFormSubmit}>
+                  <label htmlFor="name">Nome:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Seu nome"
+                    required
+                  />
 
-                <label htmlFor="email">E-mail:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Seu e-mail"
-                  required
-                />
+                  <label htmlFor="email">E-mail:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Seu e-mail"
+                    required
+                  />
 
-                <label htmlFor="phone">Telefone:</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Seu telefone"
-                  required
-                />
+                  <label htmlFor="phone">Telefone:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Seu telefone"
+                    required
+                  />
 
-                <label htmlFor="message">Mensagem:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Sua mensagem"
-                  required
-                ></textarea>
+                  <label htmlFor="message">Mensagem:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Sua mensagem"
+                    required
+                  ></textarea>
 
-                <button type="submit">Enviar</button>
-              </form>
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 };
 

@@ -1,13 +1,20 @@
-import React, { useEffect } from "react";
 import Flor from "../assets/flor.png";
 import iconfisio from "/favicon.png";
 import icondrenagem from "../assets/icon-drenagem.png";
 import iconradio from "../assets/icon-radio3.png";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Tratamentos = () => {
   return (
     <main className="main-content">
+      <Helmet>
+        <title>Tratamentos - Fisioella</title>
+        <meta
+          name="description"
+          content="Conheça os tratamentos oferecidos pela Fisioella."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/tratamentos" />
+      </Helmet>
       <div
         className="background-image"
         style={{

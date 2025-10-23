@@ -1,8 +1,17 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
 
 const Radiofrequencia = () => {
   return (
     <section>
+      <Helmet>
+        <title>Radiofrequência Íntima - Fisioella</title>
+        <meta
+          name="description"
+          content="Saiba mais sobre o tratamento de radiofrequência íntima oferecido pela Fisioella."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/radiofrequencia" />
+      </Helmet>
       <div
         className="background-image"
         style={{

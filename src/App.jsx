@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./components/ScrollToTop";
@@ -12,11 +12,9 @@ const Radiofrequencia = lazy(() => import("./pages/Radiofrequencia"));
 const Drenagem = lazy(() => import("./pages/Drenagem"));
 const Contato = lazy(() => import("./pages/Contato"));
 
-
-
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Suspense fallback={<Loading />}>
         <Routes>
@@ -31,9 +29,8 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 }
 
 export default App;
-

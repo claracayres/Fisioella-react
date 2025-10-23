@@ -1,8 +1,17 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
 
 const Drenagem = () => {
   return (
     <section>
+      <Helmet>
+        <title>Drenagem Linfática - Fisioella</title>
+        <meta
+          name="description"
+          content="Saiba mais sobre a drenagem linfática oferecida pela Fisioella."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/drenagem-linfatica" />
+      </Helmet>
       <div
         className="background-image"
         style={{

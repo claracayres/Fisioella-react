@@ -1,8 +1,17 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
 
 const FisioPelvica = () => {
   return (
     <section>
+      <Helmet>
+        <title>Fisioterapia Pélvica - Fisioella</title>
+        <meta
+          name="description"
+          content="Saiba mais sobre a fisioterapia pélvica oferecida pela Fisioella."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/fisioterapia-pelvica" />
+      </Helmet>
       <div
         className="background-image"
         style={{
