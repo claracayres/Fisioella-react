@@ -1,14 +1,54 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const handleLinkClick = () => {
-    const navbar = document.querySelector(".navbar");
+  const toggleMenu = () => {
+    const navbarLinks = document.querySelector(".navbar-links");
     const icon = document.querySelector(".hamburger i");
 
-    navbar.classList.remove("active");
+    navbarLinks.classList.toggle("active");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-times");
+  };
+
+  const closeMenu = () => {
+    const navbarLinks = document.querySelector(".navbar-links");
+    const icon = document.querySelector(".hamburger i");
+
+    navbarLinks.classList.remove("active");
     icon.classList.remove("fa-times");
     icon.classList.add("fa-bars");
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbarLinks = document.querySelector(".navbar-links");
+      const hamburger = document.querySelector(".hamburger");
+
+      if (
+        navbarLinks.classList.contains("active") &&
+        !navbarLinks.contains(event.target) &&
+        !hamburger.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    };
+
+    const handleScroll = () => {
+      const navbarLinks = document.querySelector(".navbar-links");
+      if (navbarLinks.classList.contains("active")) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header>
@@ -16,54 +56,36 @@ const Header = () => {
         <div
           className="navbar-container"
           onClick={() => (window.location.href = "/")}
-          onMouseOver={(e) => (e.target.style.cursor = "pointer")}
-          onMouseOut={(e) => (e.target.style.cursor = "default")}
           style={{ cursor: "pointer" }}
         >
           <h2 className="fisioella">FISIOELLA</h2>
           <hr className="linha-vertical" />
           <h2 className="dra-neila">Dra. Neila Cayres</h2>
         </div>
-        <div>
-          <button
-            className="hamburger"
-            onClick={() => {
-              const navbar = document.querySelector(".navbar-links");
-              const icon = document.querySelector(".hamburger i");
 
-              navbar.classList.toggle("active");
+        <button className="hamburger" onClick={toggleMenu}>
+          <i className="fa fa-bars"></i>
+        </button>
 
-              // Troca ícone
-              icon.classList.toggle("fa-bars");
-              icon.classList.toggle("fa-times");
-            }}
-          >
-            <i className="fa fa-bars"></i>
-          </button>
-        </div >
         <div className="navbar-links">
           <ul className="nav-list">
             <li>
-              <Link className="pages" to="/" onClick={handleLinkClick}>
+              <Link className="pages" to="/" onClick={closeMenu}>
                 Início
               </Link>
             </li>
             <li>
-              <Link className="pages" to="/sobre-mim" onClick={handleLinkClick}>
+              <Link className="pages" to="/sobre-mim" onClick={closeMenu}>
                 Sobre mim
               </Link>
             </li>
             <li>
-              <Link
-                className="pages"
-                to="/tratamentos"
-                onClick={handleLinkClick}
-              >
+              <Link className="pages" to="/tratamentos" onClick={closeMenu}>
                 Tratamentos
               </Link>
             </li>
             <li>
-              <Link className="pages" to="/contato" onClick={handleLinkClick}>
+              <Link className="pages" to="/contato" onClick={closeMenu}>
                 Contato
               </Link>
             </li>
