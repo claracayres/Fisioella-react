@@ -1,6 +1,6 @@
 import React from "react";
 import Flor from "../assets/flor.png";
-import Neila from "../assets/momis-3.png";
+import Neila from "../assets/Neila2.jpg";
 import { Helmet } from "react-helmet-async";
 
 const SobreMim = () => {
