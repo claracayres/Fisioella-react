@@ -1,7 +1,17 @@
 import Flor from "../assets/flor.png";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import {
+  trackPageView,
+  trackContactInterest,
+  trackFormSubmit,
+  trackWhatsAppClick,
+} from "../utils/facebookPixel";
 
 const Contato = () => {
+  useEffect(() => {
+    trackPageView("Página de Contato");
+  }, []);
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -9,6 +19,9 @@ const Contato = () => {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
+
+    // Rastrear envio do formulário
+    trackFormSubmit();
 
     // Enviar para o Formspree
     const formspreeUrl = "https://formspree.io/f/mblolqvz";
@@ -31,6 +44,9 @@ const Contato = () => {
     } catch (error) {
       console.error("Erro ao enviar para o Formspree:", error);
     }
+
+    // Rastrear clique no WhatsApp
+    trackWhatsAppClick();
 
     // Redirecionar para o WhatsApp
     const whatsappNumber = "5512996461927";
@@ -95,6 +111,7 @@ const Contato = () => {
                     id="name"
                     name="name"
                     placeholder="Seu nome"
+                    onFocus={() => trackContactInterest()}
                     required
                   />
 

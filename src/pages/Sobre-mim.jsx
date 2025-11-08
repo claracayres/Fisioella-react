@@ -2,8 +2,13 @@ import React from "react";
 import Flor from "../assets/flor.png";
 import Neila from "../assets/Neila2.jpg";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackPageView } from "../utils/facebookPixel";
 
 const SobreMim = () => {
+  useEffect(() => {
+    trackPageView("Sobre Mim");
+  }, []);
   return (
     <main className="main-content">
       <Helmet>

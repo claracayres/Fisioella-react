@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import Flor from "../assets/flor.png";
 import Logo from "../assets/logo-2.webp";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackPageView, trackWhatsAppClick } from "../utils/facebookPixel";
 
 const Inicio = () => {
+  useEffect(() => {
+    trackPageView("Página Inicial");
+  }, []);
   return (
     <>
       <main className="main-content">
@@ -52,7 +57,13 @@ const Inicio = () => {
               para atender às suas necessidades.
             </p>
             <div className="hero-buttons">
-              <Link to="https://wa.me/5512996461927" className="btn" target="_blank" rel="noopener noreferrer">
+              <Link
+                to="https://wa.me/5512996461927"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick()}
+              >
                 Agende sua consulta
               </Link>
             </div>
