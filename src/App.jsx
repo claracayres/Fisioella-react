@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { useEffect } from "react";
+import { initFacebookPixel } from "./utils/facebookPixel";  
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from "./components/Loading";
@@ -13,6 +15,10 @@ const Drenagem = lazy(() => import("./pages/Drenagem"));
 const Contato = lazy(() => import("./pages/Contato"));
 
 function App() {
+  useEffect(() => {
+    initFacebookPixel();
+  }, []);
+
   return (
     <>
       <ScrollToTop />
