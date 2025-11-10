@@ -2,10 +2,27 @@ import Flor from "../assets/flor.png";
 import iconfisio from "/favicon.png";
 import icondrenagem from "../assets/icon-drenagem.png";
 import iconradio from "../assets/icon-radio3.png";
+<<<<<<< HEAD
+=======
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackPageView, trackTreatmentClick } from "../utils/facebookPixel";
+>>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
 
 const Tratamentos = () => {
+  useEffect(() => {
+    trackPageView("Página de Tratamentos");
+  }, []);
   return (
     <main className="main-content">
+      <Helmet>
+        <title>Tratamentos - Fisioella</title>
+        <meta
+          name="description"
+          content="Conheça os tratamentos oferecidos pela Fisioella."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/tratamentos" />
+      </Helmet>
       <div
         className="background-image"
         style={{
@@ -55,7 +72,11 @@ const Tratamentos = () => {
               </div>
               <h2>Fisioterapia Pélvica</h2>
               <p>Tratamento para fortalecer e reequilibrar a região pélvica.</p>
-              <a href="/Fisiopelvica" className="serviço-link">
+              <a
+                href="/Fisiopelvica"
+                className="serviço-link"
+                onClick={() => trackTreatmentClick("Fisioterapia Pélvica")}
+              >
                 Saiba mais
                 <svg
                   className="arrow-icon"
@@ -85,7 +106,11 @@ const Tratamentos = () => {
               <h2>Radiofrequência íntima</h2>
               <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
 
-              <a href="/Radiofrequencia" className="serviço-link">
+              <a
+                href="/Radiofrequencia"
+                className="serviço-link"
+                onClick={() => trackTreatmentClick("Radiofrequência Íntima")}
+              >
                 Saiba mais
                 <svg
                   className="arrow-icon"
@@ -114,7 +139,11 @@ const Tratamentos = () => {
               </div>
               <h2>Drenagem Linfática</h2>
               <p>Redução de inchaço e toxinas com massagem terapêutica.</p>
-              <a href="/Drenagem" className="serviço-link">
+              <a
+                href="/Drenagem"
+                className="serviço-link"
+                onClick={() => trackTreatmentClick("Drenagem Linfática")}
+              >
                 Saiba mais
                 <svg
                   className="arrow-icon"

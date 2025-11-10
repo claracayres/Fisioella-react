@@ -4,10 +4,16 @@ import { Analytics } from "@vercel/analytics/react"; // Importação do Analytic
 import "./styles/global.css";
 import "./styles/responsive.css";
 import App from "./App.jsx";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-    <Analytics /> {/* Adicione o Analytics aqui */}
+    <HelmetProvider>
+      <BrowserRouter>
+        <App />
+        <Analytics /> {/* Adicione o Analytics aqui */}
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );

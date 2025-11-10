@@ -1,10 +1,28 @@
 
 import Flor from "../assets/flor.png";
+<<<<<<< HEAD
 import Neila from "../assets/momis-3.png";
+=======
+import Neila from "../assets/Neila2.jpg";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackPageView } from "../utils/facebookPixel";
+>>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
 
 const SobreMim = () => {
+  useEffect(() => {
+    trackPageView("Sobre Mim");
+  }, []);
   return (
     <main className="main-content">
+      <Helmet>
+        <title>Sobre Mim - Fisioella</title>
+        <meta
+          name="description"
+          content="Conheça a Dra. Neila Cayres, especialista em saúde da mulher."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/sobre-mim" />
+      </Helmet>
       <div
         className="background-image"
         style={{

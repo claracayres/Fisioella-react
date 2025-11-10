@@ -1,8 +1,32 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import {
+  trackTreatmentView,
+  trackScheduleIntent,
+} from "../utils/facebookPixel";
 
 const Radiofrequencia = () => {
+  useEffect(() => {
+    trackTreatmentView("Radiofrequência Íntima");
+  }, []);
   return (
+<<<<<<< HEAD
     <section id="subcontainer-section">
+=======
+    <section>
+      <Helmet>
+        <title>Radiofrequência Íntima - Fisioella</title>
+        <meta
+          name="description"
+          content="Saiba mais sobre o tratamento de radiofrequência íntima oferecido pela Fisioella."
+        />
+        <link
+          rel="canonical"
+          href="https://www.fisioella.com/radiofrequencia"
+        />
+      </Helmet>
+>>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
       <div
         className="background-image"
         style={{
@@ -89,6 +113,31 @@ const Radiofrequencia = () => {
               Contribui para o rejuvenescimento íntimo
             </p>
           </div>
+        </div>
+
+        <div
+          className="cta-section"
+          style={{ textAlign: "center", marginTop: "2rem" }}
+        >
+          <button
+            className="cta-button"
+            onClick={() => {
+              trackScheduleIntent();
+              window.location.href = "/contato";
+            }}
+            style={{
+              backgroundColor: "#8B4513",
+              color: "white",
+              padding: "15px 30px",
+              border: "none",
+              borderRadius: "25px",
+              fontSize: "18px",
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Agende sua Consulta
+          </button>
         </div>
       </div>
     </section>

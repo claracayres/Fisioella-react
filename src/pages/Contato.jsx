@@ -1,6 +1,17 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import {
+  trackPageView,
+  trackContactInterest,
+  trackFormSubmit,
+  trackWhatsAppClick,
+} from "../utils/facebookPixel";
 
 const Contato = () => {
+  useEffect(() => {
+    trackPageView("Página de Contato");
+  }, []);
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -8,6 +19,9 @@ const Contato = () => {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
+
+    // Rastrear envio do formulário
+    trackFormSubmit();
 
     // Enviar para o Formspree
     const formspreeUrl = "https://formspree.io/f/mblolqvz";
@@ -31,6 +45,9 @@ const Contato = () => {
       console.error("Erro ao enviar para o Formspree:", error);
     }
 
+    // Rastrear clique no WhatsApp
+    trackWhatsAppClick();
+
     // Redirecionar para o WhatsApp
     const whatsappNumber = "5512996461927";
     const whatsappMessage = `Olá, meu nome é ${name}. ${message}`;
@@ -42,33 +59,43 @@ const Contato = () => {
   };
 
   return (
-    <main className="contato">
-      <div
-        className="background-image"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1,
-        }}
-      >
-        <img
-          src={Flor}
-          alt="flor"
+    <>
+      <Helmet>
+        <title>Contato - Fisioella</title>
+        <meta
+          name="description"
+          content="Entre em contato com a Fisioella para mais informações."
+        />
+        <link rel="canonical" href="https://www.fisioella.com/contato" />
+      </Helmet>
+      <main className="contato">
+        <div
+          className="background-image"
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
-            opacity: 0.5,
+            zIndex: -1,
           }}
-        />
-      </div>
+        >
+          <img
+            src={Flor}
+            alt="flor"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: 0.5,
+            }}
+          />
+        </div>
 
+<<<<<<< HEAD
       <section id="Contato-page">
         <div className="Contato-text">
           <h1>Contato</h1>
@@ -87,40 +114,62 @@ const Contato = () => {
                   placeholder="Seu nome"
                   required
                 />
+=======
+        <section id="Contato-page">
+          <div className="Contato-text">
+            <h1>Contato</h1>
+            <div className="contato-container">
+              <p>
+                Para mais informações, entre em contato através do formulário
+                abaixo.
+              </p>
+              <div id="whatsapp-form">
+                <form id="contactForm" onSubmit={handleFormSubmit}>
+                  <label htmlFor="name">Nome:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Seu nome"
+                    onFocus={() => trackContactInterest()}
+                    required
+                  />
+>>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
 
-                <label htmlFor="email">E-mail:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Seu e-mail"
-                  required
-                />
+                  <label htmlFor="email">E-mail:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Seu e-mail"
+                    required
+                  />
 
-                <label htmlFor="phone">Telefone:</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Seu telefone"
-                  required
-                />
+                  <label htmlFor="phone">Telefone:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Seu telefone"
+                    required
+                  />
 
-                <label htmlFor="message">Mensagem:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Sua mensagem"
-                  required
-                ></textarea>
+                  <label htmlFor="message">Mensagem:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Sua mensagem"
+                    required
+                  ></textarea>
 
-                <button type="submit">Enviar</button>
-              </form>
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 };
 
