@@ -1,26 +1,11 @@
 import { Link } from "react-router-dom";
 import Flor from "../assets/flor.png";
 import Logo from "../assets/logo-2.webp";
-import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
-import { trackPageView, trackWhatsAppClick } from "../utils/facebookPixel";
 
 const Inicio = () => {
-  useEffect(() => {
-    trackPageView("Página Inicial");
-  }, []);
   return (
     <>
-      <main className="main-content">
-        <Helmet>
-          <title>Início - Fisioella</title>
-          <meta
-            name="description"
-            content="Bem-vindo à Fisioella, onde cuidamos da saúde da mulher com carinho e profissionalismo."
-          />
-          <link rel="canonical" href="https://www.fisioella.com/" />
-        </Helmet>
-      </main>
+      <main className="main-content"></main>
 
       <div
         className="background-image"
@@ -53,39 +38,20 @@ const Inicio = () => {
               Na Fisioella, ofereço tratamentos de fisioterapia personalizados
               para atender às suas necessidades.
             </p>
-<<<<<<< HEAD
             <div className="hero-button">
               <Link
                 to="https://wa.me/5512996461927"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
-=======
-            <div className="hero-buttons">
-              <Link
-                to="https://wa.me/5512996461927"
-                className="btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackWhatsAppClick()}
->>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
               >
                 Agende sua consulta
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
           <div>
             <img src={Logo} alt="Fisioella" className="hero-image" />
           </div>
-=======
-          <img
-            src={Logo}
-            alt="Fisioella"
-            className="hero-image"
-            fetchPriority="high"
-          />
->>>>>>> c47954c5777b580e2969cdee0a6f7d2ba4af4822
         </div>
       </section>
       <section>

@@ -10,25 +10,16 @@
   --quick-font-family: "Quicksand", sans-serif;
   --text-font-family: "Poppins", sans-serif;
 
-  --h1-font-size: 3.5rem;
-  --h2-font-size: 2.5rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
   --h3-font-size: 1.8rem;
   --p-font-size: 1.2rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
+* {
   box-sizing: border-box;
   margin: 0;
-}
-html {
+  padding: 0;
   scroll-behavior: smooth;
   /* outline: 1px solid red; */
 }
@@ -43,47 +34,34 @@ body {
   line-height: 1.4;
 }
 
-/* header */
-header {
+main {
   display: flex;
-  flex-wrap: wrap;
-  position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 70px;
-  padding: 0px 10px 0px 10px;
-  background-color: rgba(251, 241, 229, 0.8);
-  color: var(--color-text);
-  border-bottom: 2px solid var(--color-primary);
-  box-sizing: border-box;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  z-index: 999;
-}
-
-.linha-vertical {
-  width: 2px;
-  height: 60px;
-  border: none;
-  background-color: var(--color-primary);
+  justify-content: center;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px ;
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-background);
+  border-bottom: #83286d solid 2px;
+  z-index: 1;
 }
 
-.navbar-container .hamburger {
+
+.logo-container {
   display: flex;
-  align-items: center;
+  place-items: center;
   cursor: pointer;
+  gap: 10px;
 }
 
 .fisioella {
@@ -92,7 +70,12 @@ nav {
   font-weight: 300;
   letter-spacing: 1px;
   color: var(--color-text);
-  margin: 0;
+}
+
+.linha-vertical {
+  border: none;
+  border-left: 2px solid var(--color-primary);
+  height: 40px;
 }
 
 .dra-neila {
@@ -101,7 +84,10 @@ nav {
   letter-spacing: 1px;
   font-weight: 600;
   color: var(--color-text);
-  margin: 0;
+}
+
+.hamburguer {
+  display: none;
 }
 
 .nav-list {
@@ -160,9 +146,11 @@ section {
   width: 100%;
   max-width: 1200px;
   min-height: 100vh;
-  text-align: center;
-  padding: 70px 0 50px 0; /* t r b l */
-  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+#inicio {
+  padding-top: 60px;
 }
 
 .main-text {
@@ -229,10 +217,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: fit-content;
+  margin: 20px;
   justify-self: center;
 }
 
@@ -275,10 +260,12 @@ p {
   margin: 0;
 }
 
-.Sobre-mim-texto {
-  background-color: rgba(244, 191, 194, 0.5);
-  border-radius: 30px;
-  padding: 10px;
+.sobre-mim-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-items: center;
+  gap: 10px;
+  width: 90%;
 }
 
 .img-momis {
@@ -348,8 +335,12 @@ h1 {
   flex-wrap: wrap;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  gap: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #f4bfc28a;
   transition: all 0.3s ease;
 }
 
@@ -603,16 +594,8 @@ h3 {
   gap: 10px;
 }
 
-.footer-image img {
-  width: 100%;
-  height: 150px;
-  border-radius: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.footer-container h2 {
-  margin: 0;
-  text-align: center;
+.footer-logo h2,
+.footer-logo p {
   font-size: 1rem;
   color: var(--color-text);
 }
@@ -636,280 +619,56 @@ h3 {
   padding: 10px;
 }
 
-.footer-copyright p a {
-  color: #fff;
-  text-decoration: none;
+.redes-sociais img {
+  width: 25px;
 }
 
-.footer-copyright p a:hover {
+.contato,
+.endereço {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.contato h2,
+.endereço h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.contato a,
+.endereço a {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.contato a:hover,
+.endereço a:hover {
   text-decoration: underline;
-  color: #f4bfc2;
+  color: var(--color-primary);
 }
 
-@media (max-width: 1024px) {
-  /* Estilos para celular */
-  .hamburger {
-    display: block;
-    right: 40px;
-  }
-
-  header {
-    height: auto;
-  }
-
-  .navbar {
-    display: none;
-    position: relative;
-    background-color: rgba(251, 241, 229, 0.5);
-    padding-top: 80px;
-    z-index: 998;
-    width: 100%;
-    max-height: 100vh;
-    overflow-y: auto;
-    display: none;
-  }
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .navbar.active {
-    display: block;
-    padding: 0;
-    flex-wrap: wrap;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .linha-vertical {
-    height: 28px;
-    margin-bottom: 10px; /* t r b l */
-  }
-
-  .fisioella {
-    font-size: 23px;
-  }
-
-  .dra-neila {
-    font-size: 23px;
-  }
-
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: rgba(251, 241, 229, 0.8);
-    z-index: 10;
-    box-shadow: 0 2px 6px var(--shadow);
-    box-sizing: border-box;
-  }
-
-  #inicio h2 {
-    font-size: 30px;
-  }
-
-  .main-text {
-    padding: 10px;
-  }
-
-  #inicio .btn {
-    font-size: 20px;
-  }
-
-  .fisio-pelvica {
-    padding: 20px;
-    font-size: 18px;
-  }
-  .publico-alvo {
-    padding: 20px;
-    font-size: 18px;
-  }
-
-  .publico-alvo ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-  }
-
-  #Sobre-mim p {
-    padding: 20px 20px;
-  }
-
-  .Sobre-mim-texto {
-    background-color: rgba(244, 191, 194, 0.5);
-    border-radius: 30px;
-    padding: 10px;
-  }
-
-  .Img-momis {
-    width: 25vh;
-  }
-
-  #Contato-page {
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-    text-align: start;
-  }
-
-  .footer-container h2 {
-    font-size: 1.4rem;
-  }
-
-  .footer-logo,
-  .contato,
-  .endereços {
-    text-align: center;
-    font-size: 14px;
-  }
-  .footer-image img {
-    width: 100px;
-    height: auto;
-  }
-  .redes-sociais img {
-    width: 30px;
-    height: auto;
-  }
-
-  .footer-logo {
-    grid-row: 1 / span 2;
-  }
-
-  .contato {
-    text-align: center;
-  }
-
-  .contato h3 {
-    margin: 10px;
-    margin-bottom: 20px;
-  }
-
-  .endereços h3 {
-    margin: 10px;
-    margin-bottom: 20px;
-  }
-
-  .endereços {
-    grid-column: 2/ 2;
-    text-align: center;
-  }
-
-  .footer-copyright p {
-    font-size: 0.8rem;
-  }
+.footer-icon {
+  width: 20px;
+  height: auto;
 }
 
-/* Tablets até 1024px */
-@media (min-width: 1023px) {
-  .nav-list a {
-    font-size: 23px;
-  }
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .navbar.active {
-    display: block;
-    padding: 0;
-    flex-wrap: wrap;
-  }
-
-  .linha-vertical {
-    height: 35px;
-    margin-bottom: 10px; /* t r b l */
-  }
-
-  .fisioella {
-    font-size: 28px;
-  }
-
-  .dra-neila {
-    font-size: 28px;
-  }
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (max-width: 769px) {
-  .main-text {
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 100%;
-  }
-
-  p {
-    font-size: 1.3rem;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .Sobre-mim-container {
-    flex-direction: column;
-  }
-
-  .endereços {
-    grid-column: 1 / 3;
-    text-align: center;
-  }
-
-  .serviços-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .serviço-detalhes div {
-    width: 80%;
-    height: 100%;
-    padding: 20px;
-    margin: 10px;
-  }
-
-  .serviço-detalhes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .serviço-card {
-    width: 90vw;
-    max-width: 400px;
-    margin: 10px 0;
-  }
-
-  .footer-container p {
-    font-size: 1rem;
-  }
+.footer-copyright p {
+  text-align: center;
+  padding: 5px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
 
 .footer-copyright a {
   color: var(--color-secondary);
