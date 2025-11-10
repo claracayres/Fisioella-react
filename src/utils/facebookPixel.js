@@ -7,8 +7,10 @@ const options = {
 
 export const initFacebookPixel = () => {
   ReactPixel.init("1808468869757208", {}, options);
+  // PageView será chamado pelos eventos personalizados de cada página
 };
 
+// Função para o PageView inicial (apenas uma vez por sessão)
 export const trackInitialPageView = () => {
   ReactPixel.pageView();
 };
