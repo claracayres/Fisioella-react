@@ -72,7 +72,7 @@ const Inicio = () => {
             src={Logo}
             alt="Fisioella"
             className="hero-image"
-            fetchPriority="high"
+            fetchpriority="high"
           />
         </div>
       </section>
