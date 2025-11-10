@@ -2,7 +2,7 @@ import Flor from "../assets/flor.png";
 
 const FisioPelvica = () => {
   return (
-    <section>
+    <section id="subcontainer-section">
       <div
         className="background-image"
         style={{
@@ -65,7 +65,7 @@ const FisioPelvica = () => {
         </div>
 
         <div className="serviço-detalhes">
-          <div>
+          <div className="serviço-topic">
             <h3>Técnicas utilizadas:</h3>
             <p>
               Eletroterapia
@@ -76,7 +76,7 @@ const FisioPelvica = () => {
               Entre outros
             </p>
           </div>
-          <div>
+          <div className="serviço-topic">
             <h3>Para gestantes pré e pós parto:</h3>
             <p>
               Exercícios respiratórios

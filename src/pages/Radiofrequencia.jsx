@@ -2,7 +2,7 @@ import Flor from "../assets/flor.png";
 
 const Radiofrequencia = () => {
   return (
-    <section>
+    <section id="subcontainer-section">
       <div
         className="background-image"
         style={{
@@ -59,7 +59,7 @@ const Radiofrequencia = () => {
         </div>
 
         <div className="serviço-detalhes">
-          <div>
+          <div className="serviço-topic">
             <h3>Como é utilizada:</h3>
             <p>
               Procedimento não invasivo e indolor <br />
@@ -73,7 +73,7 @@ const Radiofrequencia = () => {
               <br />
             </p>
           </div>
-          <div>
+          <div className="serviço-topic">
             <h3>Para que serve a radiofrequência íntima:</h3>
             <p>
               Estimula a produção de colágeno na região íntima
