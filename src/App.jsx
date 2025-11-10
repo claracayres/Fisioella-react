@@ -19,7 +19,6 @@ function App() {
     initFacebookPixel();
   }, []);
 
-function App() {
   return (
     <Router>
       <ScrollToTop />
