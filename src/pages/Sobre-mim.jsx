@@ -1,4 +1,3 @@
-import React from "react";
 import Flor from "../assets/flor.png";
 import Neila from "../assets/momis-3.png";
 import { Helmet } from "react-helmet-async";
