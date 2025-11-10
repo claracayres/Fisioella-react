@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
 import Flor from "../assets/flor.png";
 import Logo from "../assets/logo-2.webp";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { trackPageView, trackWhatsAppClick } from "../utils/facebookPixel";
 
 const Inicio = () => {
+  useEffect(() => {
+    trackPageView("Página Inicial");
+  }, []);
   return (
     <>
-      <main className="main-content"></main>
+      <main className="main-content">
+        <Helmet>
+          <title>Início - Fisioella</title>
+          <meta
+            name="description"
+            content="Bem-vindo à Fisioella, onde cuidamos da saúde da mulher com carinho e profissionalismo."
+          />
+          <link rel="canonical" href="https://www.fisioella.com/" />
+        </Helmet>
+      </main>
 
       <div
         className="background-image"
@@ -42,7 +57,13 @@ const Inicio = () => {
               para atender às suas necessidades.
             </p>
             <div className="hero-buttons">
-              <Link to="/Contato" className="btn">
+              <Link
+                to="https://wa.me/5512996461927"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick()}
+              >
                 Agende sua consulta
               </Link>
             </div>
@@ -51,7 +72,7 @@ const Inicio = () => {
             src={Logo}
             alt="Fisioella"
             className="hero-image"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </div>
       </section>

@@ -1,8 +1,28 @@
 import Flor from "../assets/flor.png";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import {
+  trackTreatmentView,
+  trackScheduleIntent,
+} from "../utils/facebookPixel";
 
 const Drenagem = () => {
+  useEffect(() => {
+    trackTreatmentView("Drenagem Linfática");
+  }, []);
   return (
     <section>
+      <Helmet>
+        <title>Drenagem Linfática - Fisioella</title>
+        <meta
+          name="description"
+          content="Saiba mais sobre a drenagem linfática oferecida pela Fisioella."
+        />
+        <link
+          rel="canonical"
+          href="https://www.fisioella.com/drenagem-linfatica"
+        />
+      </Helmet>
       <div
         className="background-image"
         style={{
@@ -86,6 +106,31 @@ const Drenagem = () => {
               anti-inflamatório.
             </p>
           </div>
+        </div>
+
+        <div
+          className="cta-section"
+          style={{ textAlign: "center", marginTop: "2rem" }}
+        >
+          <button
+            className="cta-button"
+            onClick={() => {
+              trackScheduleIntent();
+              window.location.href = "/contato";
+            }}
+            style={{
+              backgroundColor: "#8B4513",
+              color: "white",
+              padding: "15px 30px",
+              border: "none",
+              borderRadius: "25px",
+              fontSize: "18px",
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Agende sua Consulta
+          </button>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { useEffect } from "react";
-import { initFacebookPixel } from "./utils/facebookPixel";  
+import { initFacebookPixel, trackInitialPageView } from "./utils/facebookPixel";
 import Layout from "./layouts/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from "./components/Loading";
@@ -17,10 +17,11 @@ const Contato = lazy(() => import("./pages/Contato"));
 function App() {
   useEffect(() => {
     initFacebookPixel();
+    trackInitialPageView();
   }, []);
 
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Suspense fallback={<Loading />}>
         <Routes>
@@ -35,9 +36,8 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 }
 
 export default App;
-
