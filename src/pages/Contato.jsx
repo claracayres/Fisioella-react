@@ -1,3 +1,4 @@
+import React from "react";
 import Flor from "../assets/flor.png";
 
 const Contato = () => {
@@ -72,11 +73,11 @@ const Contato = () => {
       <section id="Contato-page">
         <div className="Contato-text">
           <h1>Contato</h1>
-          <p>
-            Para mais informações, entre em contato através do formulário
-            abaixo.
-          </p>
           <div className="contato-container">
+            <p>
+              Para mais informações, entre em contato através do formulário
+              abaixo.
+            </p>
             <div id="whatsapp-form">
               <form id="contactForm" onSubmit={handleFormSubmit}>
                 <label htmlFor="name">Nome:</label>

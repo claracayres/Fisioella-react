@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import { useEffect } from "react";
-import Neila from "../assets/Neila4.jpg";
+import Neila from "../assets/momis.png";
 import Instagram from "../assets/instagram.png";
 import Whatsapp from "../assets/whatsapp.png";
 import Telefone from "../assets/telefone.png";
@@ -66,7 +66,7 @@ const Footer = () => {
       <footer className="footer-container">
         <div className="footer-logo">
           <div className="footer-image">
-            <img src={Neila} alt="" style={{ width: "100%", maxWidth: "400px" }} />
+            <img src={Neila} alt="" />
           </div>
           <div>
             <h2 className="fisioella">FISIOELLA</h2>
@@ -91,28 +91,28 @@ const Footer = () => {
         </div>
         <div className="contato">
           <h2>Contato</h2>
-          <div className="footer-info">
+          <p>
             <img className="footer-icon" src={Telefone} alt="Telefone" />
             <a href="tel:(12) 99646-1927"> (12) 99646-1927</a>
-          </div>
-          <div>
+          </p>
+          <p>
             <img className="footer-icon" src={Email} alt="Email" />
             <a href="mailto:nc_almeida@yahoo.com.br">
               {" "}
               nc_almeida@yahoo.com.br
             </a>
-          </div>
+          </p>
         </div>
-        <div className="endereço">
+        <div className="endereços">
           <h2>Endereço</h2>
-          <div className="footer-info">
+          <p>
             <img className="footer-icon" src={Localizacao} alt="Localização" />
-            <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.app.goo.gl/TNcDfSB2Bf15Zzew7">
               {" "}
               Consultório Fisioella - Rua Paulo Setubal, 179 sala 8 - Jd. São
               Dimas
             </a>
-          </div>
+          </p>
         </div>
       </footer>
       <div className="footer-copyright">

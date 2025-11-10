@@ -1,7 +1,9 @@
+import React, { useEffect } from "react";
 import Flor from "../assets/flor.png";
 import iconfisio from "/favicon.png";
 import icondrenagem from "../assets/icon-drenagem.png";
 import iconradio from "../assets/icon-radio3.png";
+import { Link } from "react-router-dom";
 
 const Tratamentos = () => {
   return (
@@ -35,7 +37,7 @@ const Tratamentos = () => {
       <section id="serviços" className="serviços-section">
         <div className="serviços-container">
           <div className="serviços-header">
-            <h1>Tratamentos</h1>
+            <h1>TRATAMENTOS</h1>
             <p>
               Lembrando que é sempre realizada uma avaliação para traçar qual
               melhor tratamento para cada paciente, assim sendo possível a

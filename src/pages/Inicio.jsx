@@ -14,6 +14,7 @@ const Inicio = () => {
           top: 0,
           left: 0,
           width: "100%",
+          height: "100%",
           zIndex: -1,
         }}
       >
@@ -25,11 +26,13 @@ const Inicio = () => {
             top: 0,
             left: 0,
             width: "100%",
+            height: "100%",
             objectFit: "cover",
             opacity: 0.2,
           }}
         />
       </div>
+
       <section id="inicio">
         <div className="main-text">
           <div className="hero-text">
@@ -38,23 +41,21 @@ const Inicio = () => {
               Na Fisioella, ofereço tratamentos de fisioterapia personalizados
               para atender às suas necessidades.
             </p>
-            <div className="hero-button">
-              <Link
-                to="https://wa.me/5512996461927"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
+            <div className="hero-buttons">
+              <Link to="/Contato" className="btn">
                 Agende sua consulta
               </Link>
             </div>
           </div>
-          <div>
-            <img src={Logo} alt="Fisioella" className="hero-image" />
-          </div>
+          <img
+            src={Logo}
+            alt="Fisioella"
+            className="hero-image"
+            fetchpriority="high"
+          />
         </div>
       </section>
-      <section>
+      <section id="inicio">
         <div className="fisio-pelvica">
           <h2>O que é fisioterapia Pélvica?</h2>
 

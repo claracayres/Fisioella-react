@@ -2,7 +2,7 @@ import Flor from "../assets/flor.png";
 
 const Drenagem = () => {
   return (
-    <section id="subcontainer-section">
+    <section>
       <div
         className="background-image"
         style={{
@@ -55,7 +55,7 @@ const Drenagem = () => {
           </p>
         </div>
         <div className="serviço-detalhes">
-          <div className="serviço-topic">
+          <div>
             <h3>Taping</h3>
             <p>
               Estimula a circulação e a drenagem linfática, ajudando a reduzir
@@ -63,7 +63,7 @@ const Drenagem = () => {
             </p>
           </div>
 
-          <div className="serviço-topic">
+          <div>
             <h3>Movimentos Manuais</h3>
             <p>
               Manobras suaves para eliminar toxinas e aliviar a sensação de
@@ -71,14 +71,14 @@ const Drenagem = () => {
             </p>
           </div>
 
-          <div className="serviço-topic">
+          <div>
             <h3>Pós-operatório e Cuidados Especiais</h3>
             <p>
               Auxilia na recuperação pós-cirúrgica e em condições como lipedema
               e linfedema.
             </p>
           </div>
-          <div className="serviço-topic">
+          <div>
             <h3>Laserterapia</h3>
             <p>
               Aplicação em linfonodos que promovem a drenagem a longo prazo.
