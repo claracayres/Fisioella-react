@@ -117,14 +117,7 @@ const Footer = () => {
       </footer>
       <div className="footer-copyright">
         <p>
-          &copy;2025 Clara Cayres. All rights reserved.{" "}
-          <a
-            href="https://github.com/claracayres"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/claracayres
-          </a>
+          &copy;2025 Dra. Neila Cayres. Todos os direitos reservados.
         </p>
       </div>
     </>
