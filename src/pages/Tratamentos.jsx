@@ -64,14 +64,17 @@ const Tratamentos = () => {
               className="serviço-card serviço-link-wrapper"
               onClick={() => trackTreatmentClick("Fisioterapia Pélvica")}
             >
-              <div className="serviço-image">
-                <img
-                  className="image"
-                  src={iconfisio}
-                  alt="Fisioterapia Pélvica"
-                />
+              <div className="card-header">
+                <div className="serviço-image">
+                  <img
+                    className="image"
+                    src={iconfisio}
+                    alt="Fisioterapia Pélvica"
+                  />
+                </div>
+                <h2>Fisioterapia Pélvica</h2>
               </div>
-              <h2>Fisioterapia Pélvica</h2>
+
               <p>Tratamento para fortalecer e reequilibrar a região pélvica.</p>
               <a className="serviço-link">
                 Saiba mais
@@ -97,14 +100,17 @@ const Tratamentos = () => {
               className="serviço-card serviço-link-wrapper"
               onClick={() => trackTreatmentClick("Radiofrequência Íntima")}
             >
-              <div className="serviço-image">
-                <img
-                  className="image"
-                  src={iconradio}
-                  alt="Radiofrequência íntima"
-                />
+              <div className="card-header">
+                <div className="serviço-image">
+                  <img
+                    className="image"
+                    src={iconradio}
+                    alt="Radiofrequência íntima"
+                  />
+                </div>
+                <h2>Radiofrequência íntima</h2>
               </div>
-              <h2>Radiofrequência íntima</h2>
+
               <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
 
               <a className="serviço-link">
@@ -131,14 +137,17 @@ const Tratamentos = () => {
               className="serviço-card serviço-link-wrapper centered"
               onClick={() => trackTreatmentClick("Drenagem Linfática")}
             >
-              <div className="serviço-image">
-                <img
-                  className="icondrenagem"
-                  src={icondrenagem}
-                  alt="Drenagem Linfática"
-                />
+              <div className="card-header">
+                <div className="serviço-image">
+                  <img
+                    className="icondrenagem"
+                    src={icondrenagem}
+                    alt="Drenagem Linfática"
+                  />
+                </div>
+                <h2>Drenagem Linfática</h2>
               </div>
-              <h2>Drenagem Linfática</h2>
+
               <p>Redução de inchaço e toxinas com massagem terapêutica.</p>
               <a className="serviço-link">
                 Saiba mais
