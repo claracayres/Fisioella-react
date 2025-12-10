@@ -59,7 +59,11 @@ const Tratamentos = () => {
 
           <div className="serviços-grid">
             {/* Tratamento 1 */}
-            <div className="serviço-card">
+            <a
+              href="/Fisiopelvica"
+              className="serviço-card serviço-link-wrapper"
+              onClick={() => trackTreatmentClick("Fisioterapia Pélvica")}
+            >
               <div className="serviço-image">
                 <img
                   className="image"
@@ -69,11 +73,7 @@ const Tratamentos = () => {
               </div>
               <h2>Fisioterapia Pélvica</h2>
               <p>Tratamento para fortalecer e reequilibrar a região pélvica.</p>
-              <a
-                href="/Fisiopelvica"
-                className="serviço-link"
-                onClick={() => trackTreatmentClick("Fisioterapia Pélvica")}
-              >
+              <a className="serviço-link">
                 Saiba mais
                 <svg
                   className="arrow-icon"
@@ -89,10 +89,14 @@ const Tratamentos = () => {
                   ></path>
                 </svg>
               </a>
-            </div>
+            </a>
 
             {/* Tratamento 2 */}
-            <div className="serviço-card">
+            <a
+              href="/Radiofrequencia"
+              className="serviço-card serviço-link-wrapper"
+              onClick={() => trackTreatmentClick("Radiofrequência Íntima")}
+            >
               <div className="serviço-image">
                 <img
                   className="image"
@@ -103,11 +107,7 @@ const Tratamentos = () => {
               <h2>Radiofrequência íntima</h2>
               <p>Rejuvenescimento e Melhora da Saúde Íntima</p>
 
-              <a
-                href="/Radiofrequencia"
-                className="serviço-link"
-                onClick={() => trackTreatmentClick("Radiofrequência Íntima")}
-              >
+              <a className="serviço-link">
                 Saiba mais
                 <svg
                   className="arrow-icon"
@@ -123,10 +123,14 @@ const Tratamentos = () => {
                   ></path>
                 </svg>
               </a>
-            </div>
+            </a>
 
             {/* Tratamento 3 */}
-            <div className="serviço-card centered">
+            <a
+              href="/Drenagem"
+              className="serviço-card serviço-link-wrapper centered"
+              onClick={() => trackTreatmentClick("Drenagem Linfática")}
+            >
               <div className="serviço-image">
                 <img
                   className="icondrenagem"
@@ -136,11 +140,7 @@ const Tratamentos = () => {
               </div>
               <h2>Drenagem Linfática</h2>
               <p>Redução de inchaço e toxinas com massagem terapêutica.</p>
-              <a
-                href="/Drenagem"
-                className="serviço-link"
-                onClick={() => trackTreatmentClick("Drenagem Linfática")}
-              >
+              <a className="serviço-link">
                 Saiba mais
                 <svg
                   className="arrow-icon"
@@ -156,7 +156,7 @@ const Tratamentos = () => {
                   ></path>
                 </svg>
               </a>
-            </div>
+            </a>
           </div>
         </div>
       </section>

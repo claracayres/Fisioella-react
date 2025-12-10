@@ -117,20 +117,10 @@ const FisioPelvica = () => {
           style={{ textAlign: "center", marginTop: "2rem" }}
         >
           <button
-            className="cta-button"
+            className="btn"
             onClick={() => {
               trackScheduleIntent();
-              window.location.href = "/contato";
-            }}
-            style={{
-              backgroundColor: "#8B4513",
-              color: "white",
-              padding: "15px 30px",
-              border: "none",
-              borderRadius: "25px",
-              fontSize: "18px",
-              cursor: "pointer",
-              fontWeight: "bold",
+              window.open("https://wa.me/5512996461927", "_blank");
             }}
           >
             Agende sua Consulta

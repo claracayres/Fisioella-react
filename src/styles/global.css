@@ -195,7 +195,7 @@ p {
   flex-wrap: wrap;
 }
 
-#inicio .btn {
+.btn {
   display: inline-block;
   font-family: var(--quick-font-family);
   font-size: 25px;
@@ -205,12 +205,14 @@ p {
   color: var(--color-primary);
   border-radius: 20px;
   padding: 10px 20px;
+  background: transparent;
+  cursor: pointer;
   border: rgba(131, 40, 109, 0.6) solid 2px;
   box-shadow: 0 0 7px var(--shadow);
   transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
-#inicio .btn:hover {
+.btn:hover {
   color: var(--color-secondary);
   background-color: var(--color-primary);
   box-shadow: 0 0 2px var(--shadow), 0 0 6px var(--shadow),
@@ -365,6 +367,9 @@ p {
   padding: 15px;
   transition: all 0.3s ease;
   width: 35vw;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   justify-self: center;
   flex-wrap: wrap;
 }
@@ -425,9 +430,9 @@ p {
 
 .serviço-link,
 .serviço-link-l {
-  color: var(--dark-color);
   font-weight: 500;
   font-family: var(--text-font-family);
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -854,7 +859,7 @@ button[type="submit"]:hover {
     padding: 10px;
   }
 
-  #inicio .btn {
+  .btn {
     font-size: 20px;
   }
 
@@ -882,7 +887,6 @@ button[type="submit"]:hover {
     background-color: rgba(244, 191, 194, 0.5);
     border-radius: 30px;
     padding: 10px;
-
   }
 
   .Img-momis {
